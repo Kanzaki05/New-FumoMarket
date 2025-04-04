@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@Page.Title</title>
+    @RenderSection("head", required: false)
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #343a40;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #343a40;
+            border-color: #343a40;
+            border-radius: 0;
+            margin-bottom: 0;
+        }
+
+        .navbar-brand {
+            color: #ffffff;
+            font-size: 24px;
+        }
+
+        .navbar-nav > li > a {
+            color: #ffffff;
+        }
+
+            .navbar-nav > li > a:hover,
+            .navbar-nav > li > a:focus {
+                background-color: #ffffff;
+                color: #343a40;
+            }
+
+        .navbar-nav > .active > a,
+        .navbar-nav > .active > a:hover,
+        .navbar-nav > .active > a:focus {
+            background-color: #ffffff;
+            color: #03e9f4;
+        }
+
+        .navbar-nav {
+            float: left;
+        }
+
+        .navbar-left {
+            float: left;
+        }
+
+        .navbar-right {
+            float: right;
+        }
+
+        .navbar-left > li {
+            display: inline-block;
+            margin-right: 10px; 
+            border-right: 1px solid #ffffff; 
+            padding-right: 10px; 
+        }
+
+            
+            .navbar-left > li:last-child {
+                border-right: none; 
+            }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>@Html.ActionLink("Market", "Categoria", "Admin", null, new { @class = "nav-link" })</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-left">
+                    <li>@Html.ActionLink("Crear Categoría", "Create", "Admin", null, new { @class = "nav-link" })</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-left">
+                    <li>@Html.ActionLink("Usuarios", "Usuarios", "Admin", null, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>@Html.ActionLink("Cerrar Sesión", "Salir", "Admin", null, new { @class = "nav-link" })</li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+</body>
+</html>

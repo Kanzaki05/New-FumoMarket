@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbMarketplaceModelStoreContainer" CdmEntityContainer="dbMarketplaceEntities">
+    <EntitySetMapping Name="tbl_admin">
+      <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_admin">
+        <MappingFragment StoreEntitySet="tbl_admin">
+          <ScalarProperty Name="ad_id" ColumnName="ad_id" />
+          <ScalarProperty Name="ad_usuario" ColumnName="ad_usuario" />
+          <ScalarProperty Name="ad_clave" ColumnName="ad_clave" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_carrito">
+      <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_carrito">
+        <MappingFragment StoreEntitySet="tbl_carrito">
+          <ScalarProperty Name="carrito_id" ColumnName="carrito_id" />
+          <ScalarProperty Name="carrito_fk_usuario" ColumnName="carrito_fk_usuario" />
+          <ScalarProperty Name="carrito_fk_producto" ColumnName="carrito_fk_producto" />
+          <ScalarProperty Name="carrito_cantidad" ColumnName="carrito_cantidad" />
+          <ScalarProperty Name="carrito_fecha" ColumnName="carrito_fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_categoria">
+      <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_categoria">
+        <MappingFragment StoreEntitySet="tbl_categoria">
+          <ScalarProperty Name="cat_id" ColumnName="cat_id" />
+          <ScalarProperty Name="cat_nombre" ColumnName="cat_nombre" />
+          <ScalarProperty Name="cat_imagen" ColumnName="cat_imagen" />
+          <ScalarProperty Name="cat_fk_ad" ColumnName="cat_fk_ad" />
+          <ScalarProperty Name="cat_estado" ColumnName="cat_estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_compra">
+      <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_compra">
+        <MappingFragment StoreEntitySet="tbl_compra">
+          <ScalarProperty Name="compra_id" ColumnName="compra_id" />
+          <ScalarProperty Name="compra_fk_usuario" ColumnName="compra_fk_usuario" />
+          <ScalarProperty Name="compra_fk_direccion" ColumnName="compra_fk_direccion" />
+          <ScalarProperty Name="compra_fecha" ColumnName="compra_fecha" />
+          <ScalarProperty Name="compra_total" ColumnName="compra_total" />
+          <ScalarProperty Name="compra_metodo_pago" ColumnName="compra_metodo_pago" />
+          <ScalarProperty Name="compra_observaciones" ColumnName="compra_observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_detalle_compra">
+      <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_detalle_compra">
+        <MappingFragment StoreEntitySet="tbl_detalle_compra">
+          <ScalarProperty Name="detalle_id" ColumnName="detalle_id" />
+          <ScalarProperty Name="detalle_fk_compra" ColumnName="detalle_fk_compra" />
+          <ScalarProperty Name="detalle_fk_producto" ColumnName="detalle_fk_producto" />
+          <ScalarProperty Name="detalle_cantidad" ColumnName="detalle_cantidad" />
+          <ScalarProperty Name="detalle_precio_unitario" ColumnName="detalle_precio_unitario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_direccion">
+      <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_direccion">
+        <MappingFragment StoreEntitySet="tbl_direccion">
+          <ScalarProperty Name="direc_id" ColumnName="direc_id" />
+          <ScalarProperty Name="direc_pais" ColumnName="direc_pais" />
+          <ScalarProperty Name="direc_provincia" ColumnName="direc_provincia" />
+          <ScalarProperty Name="direc_distrito" ColumnName="direc_distrito" />
+          <ScalarProperty Name="direc_postal" ColumnName="direc_postal" />
+          <ScalarProperty Name="direc_linea1" ColumnName="direc_linea1" />
+          <ScalarProperty Name="direc_linea2" ColumnName="direc_linea2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_pago">
+      <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_pago">
+        <MappingFragment StoreEntitySet="tbl_pago">
+          <ScalarProperty Name="pago_id" ColumnName="pago_id" />
+          <ScalarProperty Name="pago_tipo" ColumnName="pago_tipo" />
+          <ScalarProperty Name="pago_tarjeta" ColumnName="pago_tarjeta" />
+          <ScalarProperty Name="pago_caducidad" ColumnName="pago_caducidad" />
+          <ScalarProperty Name="pago_cvv" ColumnName="pago_cvv" />
+          <ScalarProperty Name="pago_fk_compra" ColumnName="pago_fk_compra" />
+          <ScalarProperty Name="pago_fecha" ColumnName="pago_fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_producto">
+      <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_producto">
+        <MappingFragment StoreEntitySet="tbl_producto">
+          <ScalarProperty Name="pro_id" ColumnName="pro_id" />
+          <ScalarProperty Name="pro_nombre" ColumnName="pro_nombre" />
+          <ScalarProperty Name="pro_imagen" ColumnName="pro_imagen" />
+          <ScalarProperty Name="pro_descrip" ColumnName="pro_descrip" />
+          <ScalarProperty Name="pro_precio" ColumnName="pro_precio" />
+          <ScalarProperty Name="pro_fk_user" ColumnName="pro_fk_user" />
+          <ScalarProperty Name="pro_fk_cat" ColumnName="pro_fk_cat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_usuario">
+      <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_usuario">
+        <MappingFragment StoreEntitySet="tbl_usuario">
+          <ScalarProperty Name="u_id" ColumnName="u_id" />
+          <ScalarProperty Name="u_nombre" ColumnName="u_nombre" />
+          <ScalarProperty Name="u_email" ColumnName="u_email" />
+          <ScalarProperty Name="u_clave" ColumnName="u_clave" />
+          <ScalarProperty Name="u_imagen" ColumnName="u_imagen" />
+          <ScalarProperty Name="u_contacto" ColumnName="u_contacto" />
+          <ScalarProperty Name="u_descrip" ColumnName="u_descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_usuario_direccion">
+      <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_usuario_direccion">
+        <MappingFragment StoreEntitySet="tbl_usuario_direccion">
+          <ScalarProperty Name="ud_id" ColumnName="ud_id" />
+          <ScalarProperty Name="ud_u_id" ColumnName="ud_u_id" />
+          <ScalarProperty Name="ud_direc_id" ColumnName="ud_direc_id" />
+          <ScalarProperty Name="ud_activa" ColumnName="ud_activa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

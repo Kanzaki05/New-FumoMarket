@@ -1,0 +1,130 @@
+﻿/* Contenedor general */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Encabezado de la página */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+/* Tabla de carrito */
+.table {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .table th {
+        background-color: #343a40;
+        color: #fff;
+        text-align: center;
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .table td {
+        text-align: center;
+        vertical-align: middle;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+/* Estilo para las imágenes de los productos */
+.img-thumbnail {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px; /* Espaciado a la derecha de la imagen */
+}
+
+/* Botones de acción */
+.btn-warning {
+    color: #fff;
+    background-color: #ffc107;
+    border-color: #ffc107;
+    padding: 5px 10px;
+    font-size: 1rem;
+    margin: 0 5px;
+}
+
+    .btn-warning:hover {
+        background-color: #e0a800;
+        border-color: #d39e00;
+    }
+
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+
+    .btn-danger:hover {
+        background-color: #c82333;
+        border-color: #bd2130;
+    }
+
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+    .btn-success:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+    }
+
+/* Estilo para los botones de cantidad */
+.btn-quantity {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+/* Estilo para el contenedor de cantidad */
+.quantity-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+    /* Alineación de la cantidad */
+    .quantity-container span {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+/* Enlace de "Comprar" centrado */
+.buy-button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Texto centrado para mensajes */
+.text-center {
+    color: #6c757d;
+    font-size: 1rem;
+    font-style: italic;
+}

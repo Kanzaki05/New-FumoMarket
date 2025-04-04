@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Market.Models.tbl_carrito>
+
+@{
+    ViewBag.Title = "VerCarrito";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+<link href="~/Content/carritostyle.css" rel="stylesheet" />
+<link href="~/Content/footerstyle.css" rel="stylesheet" />
+
+<h2>Tu Carrito</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Foto</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Total</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <!-- Foto del producto -->
+                        <img src="@Url.Content(item.tbl_producto.pro_imagen)" alt="Imagen de @item.tbl_producto.pro_nombre" class="img-thumbnail" />
+                    </td>
+                    <td>@item.tbl_producto.pro_nombre</td>
+                    <td>
+                        <div class="quantity-container">
+                            <!-- Botón de decremento -->
+                            @using (Html.BeginForm("DecrementarCantidad", "Carrito", FormMethod.Post))
+                            {
+                                @Html.Hidden("carritoId", item.carrito_id)
+                                <button type="submit" class="btn btn-warning">-</button>
+                            }
+
+                            <!-- Cantidad -->
+                            <span>@item.carrito_cantidad</span>
+
+                            <!-- Botón de incremento -->
+                            @using (Html.BeginForm("IncrementarCantidad", "Carrito", FormMethod.Post))
+                            {
+                                @Html.Hidden("carritoId", item.carrito_id)
+                                <button type="submit" class="btn btn-warning">+</button>
+                            }
+                        </div>
+                    </td>
+                    <td>S/. @item.tbl_producto.pro_precio</td>
+                    <td>S/. @(item.carrito_cantidad * item.tbl_producto.pro_precio)</td>
+                    <td>
+                        <!-- Formulario para eliminar producto -->
+                        @using (Html.BeginForm("EliminarDelCarrito", "Carrito", FormMethod.Post))
+                        {
+                            @Html.Hidden("carritoId", item.carrito_id)
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        }
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="6" class="text-center">Carrito vacío</td>
+            </tr>
+        }
+    </tbody>
+
+    <tfoot>
+        @{
+            decimal total = 0;
+            foreach (var item in Model)
+            {
+                decimal precio = item.tbl_producto.pro_precio.HasValue ? item.tbl_producto.pro_precio.Value : 0m;
+                total += item.carrito_cantidad * precio;
+            }
+        }
+        <!-- Mostrar total -->
+        <tr>
+            <td></td>
+            <td colspan="3" style="text-align: left;"><strong>Total:</strong></td>
+            <td><strong>S/. @total</strong></td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+
+<!-- Enlace para proceder con la compra -->
+<a href="@Url.Action("Comprar", "Carrito")" class="btn btn-success">Comprar</a>
+

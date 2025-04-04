@@ -1,0 +1,104 @@
+/* Estilos generales */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+#main-div {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Título principal */
+h1 {
+    font-size: 2rem;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+/* Formulario de inicio de sesión */
+.form.signin {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para los grupos de entrada */
+.input-container .form-group {
+    margin-bottom: 20px;
+}
+
+/* Input y sus iconos */
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-group-addon {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 0 5px 5px 0;
+    padding: 10px;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+    .form-control:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+/* Mensajes de error */
+span[style="color:red"] {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+/* Botón de inicio de sesión */
+.btn-danger {
+    background-color: #007bff;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .btn-danger:hover {
+        background-color: #063c89;
+    }
+
+/* Enlace de registro */
+p a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+    p a:hover {
+        text-decoration: underline;
+    }
+
+/* Mensaje de error general */
+.form-group p[style="color:red"] {
+    font-size: 0.9em;
+    margin-top: 10px;
+}

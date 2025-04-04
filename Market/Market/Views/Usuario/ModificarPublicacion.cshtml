@@ -1,0 +1,86 @@
+﻿@model Market.Models.VerPublicacion
+@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ModificarPublicacion</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/modificarpublicacion.css" rel="stylesheet" />
+    <link href="~/Content/footerstyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="main-div">
+        <div id="box" class="img-responsive">
+            @using (Html.BeginForm("ModificarPublicacion",
+                            "Usuario",
+                            FormMethod.Post,
+                            new { enctype = "multipart/form-data" }))
+            {
+                <div class="container">
+                    <!-- Agregada la clase "container" -->
+                    <div class="form signin">
+                        <!-- Agregada la clase "form" -->
+                        <h2>Modificar Publicación</h2>
+                        @Html.HiddenFor(x => x.pro_id)
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                @Html.TextBoxFor(x => x.pro_nombre, new { @class = "form-control", @placeholder = "Nombre del Producto" })
+
+                            </div>
+                            <span style="color:red">   @Html.ValidationMessageFor(x => x.pro_nombre) </span>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                @Html.TextBoxFor(x => x.pro_precio, new { @class = "form-control", @placeholder = "Precio" })
+
+                            </div>
+                            <span style="color:red">   @Html.ValidationMessageFor(x => x.pro_precio) </span>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                <textarea id="pro_descrip" name="pro_descrip" class="form-control" placeholder="Descripción">@Model.pro_descrip</textarea>
+                            </div>
+                            <span style="color:red">   @Html.ValidationMessageFor(x => x.pro_descrip) </span>
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <input type="submit" value="Modificar Producto" class="btn btn-success btn-block" />
+
+                        </div>
+
+                        <div class="form-group">
+                            <p style="color:red">@ViewBag.error</p>
+                        </div>
+
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery.validate-vsdoc.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+</body>
+</html>

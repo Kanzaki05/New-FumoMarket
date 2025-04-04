@@ -1,0 +1,71 @@
+﻿@model Market.Models.tbl_usuario
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/loginstyle.css" rel="stylesheet" />
+    <link href="~/Content/footerstyle.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="main-div">
+        <div id="box" class="img-responsive">
+            @using (@Html.BeginForm())
+            {
+                <div class="container">
+                    <div class="form signin">
+                        <h1>Inicio de Sesión Usuario</h1>
+
+                        <div class="input-container">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                    @*<asp:TextBox ID="TextBox1" runat="server" class="form-control" placeholder="Username" required="required"></asp:TextBox>*@
+                                    @Html.TextBoxFor(x => x.u_email, new { @class = "form-control", @placeholder = "Email" })
+
+                                </div>
+                                <span style="color:red">   @Html.ValidationMessageFor(x => x.u_email) </span>
+
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                    @*<asp:TextBox ID="txtpassword" runat="server" class="form-control" placeholder="Password" TextMode="Password" required="required"></asp:TextBox>*@
+                                    @Html.PasswordFor(x => x.u_clave, new { @class = "form-control", @placeholder = "Clave" })
+
+                                </div>
+                                <span style="color:red">   @Html.ValidationMessageFor(x => x.u_clave) </span>
+                            </div>
+
+                            <div class="form-group">
+                                @*<asp:Button ID="Button1" runat="server" Text="Log In" class="form-control  btn-success" OnClick="Button1_Click" OnClientClick="retrun(passwordmatchfunc())" />*@
+                                <input type="submit" value="Iniciar Sesión" class="btn btn-danger btn-block" style="text-align: center" ; />
+
+                            </div>
+
+                            <div class="form-group">
+                                <p style="color:red">@ViewBag.error</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery.validate-vsdoc.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+</body>
+</html>

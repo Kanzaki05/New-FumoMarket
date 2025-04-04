@@ -1,0 +1,108 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<Market.Models.tbl_categoria>
+
+@{
+    ViewBag.Title = "Categoría";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View Category</title>
+    <link href="~/Content/paginition.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #243b55;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .row {
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+
+        .col-lg-4 {
+            height: 450px;
+            margin-top: 100px;
+        }
+
+            .col-lg-4 img {
+                height: 100%;
+                width: 100%;
+                border-radius: 50px;
+            }
+
+            .col-lg-4 h4 {
+                color: #808080;
+                font-family: 'Arial Rounded MT', sans-serif;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+        .pagination-container {
+            margin-top: 20%;
+            text-align: center;
+        }
+
+        .pagination {
+            display: inline-block;
+        }
+
+            .pagination a {
+                color: #03e9f4;
+                text-decoration: none;
+                padding: 8px 16px;
+                margin: 0 4px;
+            }
+
+                .pagination a:hover {
+                    background-color: #03e9f4;
+                    color: #fff;
+                    border-color: #03e9f4;
+                }
+
+            .pagination .active a {
+                background-color: #03e9f4;
+                color: #fff;
+                border-color: #03e9f4;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+
+        <div class="row">
+            @if (Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    <div class="col-lg-4">
+                        <img src="@Url.Content(item.cat_imagen)" />
+                        <h4>@item.cat_nombre</h4>
+                        <div>
+                            @Html.ActionLink("Eliminar", "DeleteCategoria", new { id = item.cat_id }, new { @class = "btn btn-danger btn-sm" })
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+    <div class="pagination-container">
+        <div class="pagination">
+            @Html.PagedListPager(Model, page => Url.Action("Categoria", new { page }), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions { HttpMethod = "get" }))
+        </div>
+    </div>
+</body>
+</html>

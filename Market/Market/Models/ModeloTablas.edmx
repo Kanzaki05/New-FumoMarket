@@ -1,0 +1,813 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbMarketplaceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_admin">
+          <Key>
+            <PropertyRef Name="ad_id" />
+          </Key>
+          <Property Name="ad_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ad_usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ad_clave" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_carrito">
+          <Key>
+            <PropertyRef Name="carrito_id" />
+          </Key>
+          <Property Name="carrito_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="carrito_fk_usuario" Type="int" />
+          <Property Name="carrito_fk_producto" Type="int" />
+          <Property Name="carrito_cantidad" Type="int" Nullable="false" />
+          <Property Name="carrito_fecha" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tbl_categoria">
+          <Key>
+            <PropertyRef Name="cat_id" />
+          </Key>
+          <Property Name="cat_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cat_nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="cat_imagen" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="cat_fk_ad" Type="int" />
+          <Property Name="cat_estado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_compra">
+          <Key>
+            <PropertyRef Name="compra_id" />
+          </Key>
+          <Property Name="compra_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="compra_fk_usuario" Type="int" Nullable="false" />
+          <Property Name="compra_fk_direccion" Type="int" Nullable="false" />
+          <Property Name="compra_fecha" Type="datetime" />
+          <Property Name="compra_total" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="compra_metodo_pago" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="compra_observaciones" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="tbl_detalle_compra">
+          <Key>
+            <PropertyRef Name="detalle_id" />
+          </Key>
+          <Property Name="detalle_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="detalle_fk_compra" Type="int" Nullable="false" />
+          <Property Name="detalle_fk_producto" Type="int" Nullable="false" />
+          <Property Name="detalle_cantidad" Type="int" Nullable="false" />
+          <Property Name="detalle_precio_unitario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_direccion">
+          <Key>
+            <PropertyRef Name="direc_id" />
+          </Key>
+          <Property Name="direc_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="direc_pais" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="direc_provincia" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="direc_distrito" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="direc_postal" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="direc_linea1" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="direc_linea2" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="tbl_pago">
+          <Key>
+            <PropertyRef Name="pago_id" />
+          </Key>
+          <Property Name="pago_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pago_tipo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="pago_tarjeta" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="pago_caducidad" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="pago_cvv" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="pago_fk_compra" Type="int" Nullable="false" />
+          <Property Name="pago_fecha" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tbl_producto">
+          <Key>
+            <PropertyRef Name="pro_id" />
+          </Key>
+          <Property Name="pro_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pro_nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="pro_imagen" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="pro_descrip" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="pro_precio" Type="int" />
+          <Property Name="pro_fk_user" Type="int" />
+          <Property Name="pro_fk_cat" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_usuario">
+          <Key>
+            <PropertyRef Name="u_id" />
+          </Key>
+          <Property Name="u_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="u_nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="u_email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="u_clave" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="u_imagen" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="u_contacto" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="u_descrip" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="tbl_usuario_direccion">
+          <Key>
+            <PropertyRef Name="ud_id" />
+          </Key>
+          <Property Name="ud_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ud_u_id" Type="int" />
+          <Property Name="ud_direc_id" Type="int" />
+          <Property Name="ud_activa" Type="bit" />
+        </EntityType>
+        <Association Name="FK__tbl_carri__carri__4A8310C6">
+          <End Role="tbl_usuario" Type="Self.tbl_usuario" Multiplicity="0..1" />
+          <End Role="tbl_carrito" Type="Self.tbl_carrito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_usuario">
+              <PropertyRef Name="u_id" />
+            </Principal>
+            <Dependent Role="tbl_carrito">
+              <PropertyRef Name="carrito_fk_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_carri__carri__4B7734FF">
+          <End Role="tbl_producto" Type="Self.tbl_producto" Multiplicity="0..1" />
+          <End Role="tbl_carrito" Type="Self.tbl_carrito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_producto">
+              <PropertyRef Name="pro_id" />
+            </Principal>
+            <Dependent Role="tbl_carrito">
+              <PropertyRef Name="carrito_fk_producto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_categ__cat_f__3A81B327">
+          <End Role="tbl_admin" Type="Self.tbl_admin" Multiplicity="0..1" />
+          <End Role="tbl_categoria" Type="Self.tbl_categoria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_admin">
+              <PropertyRef Name="ad_id" />
+            </Principal>
+            <Dependent Role="tbl_categoria">
+              <PropertyRef Name="cat_fk_ad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_compr__compr__503BEA1C">
+          <End Role="tbl_usuario" Type="Self.tbl_usuario" Multiplicity="1" />
+          <End Role="tbl_compra" Type="Self.tbl_compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_usuario">
+              <PropertyRef Name="u_id" />
+            </Principal>
+            <Dependent Role="tbl_compra">
+              <PropertyRef Name="compra_fk_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_compr__compr__51300E55">
+          <End Role="tbl_usuario_direccion" Type="Self.tbl_usuario_direccion" Multiplicity="1" />
+          <End Role="tbl_compra" Type="Self.tbl_compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_usuario_direccion">
+              <PropertyRef Name="ud_id" />
+            </Principal>
+            <Dependent Role="tbl_compra">
+              <PropertyRef Name="compra_fk_direccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_pago__pago_f__55009F39">
+          <End Role="tbl_compra" Type="Self.tbl_compra" Multiplicity="1" />
+          <End Role="tbl_pago" Type="Self.tbl_pago" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_compra">
+              <PropertyRef Name="compra_id" />
+            </Principal>
+            <Dependent Role="tbl_pago">
+              <PropertyRef Name="pago_fk_compra" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_produ__pro_f__46B27FE2">
+          <End Role="tbl_usuario" Type="Self.tbl_usuario" Multiplicity="0..1" />
+          <End Role="tbl_producto" Type="Self.tbl_producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_usuario">
+              <PropertyRef Name="u_id" />
+            </Principal>
+            <Dependent Role="tbl_producto">
+              <PropertyRef Name="pro_fk_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_produ__pro_f__47A6A41B">
+          <End Role="tbl_categoria" Type="Self.tbl_categoria" Multiplicity="0..1" />
+          <End Role="tbl_producto" Type="Self.tbl_producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_categoria">
+              <PropertyRef Name="cat_id" />
+            </Principal>
+            <Dependent Role="tbl_producto">
+              <PropertyRef Name="pro_fk_cat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_usuar__ud_di__42E1EEFE">
+          <End Role="tbl_direccion" Type="Self.tbl_direccion" Multiplicity="0..1" />
+          <End Role="tbl_usuario_direccion" Type="Self.tbl_usuario_direccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_direccion">
+              <PropertyRef Name="direc_id" />
+            </Principal>
+            <Dependent Role="tbl_usuario_direccion">
+              <PropertyRef Name="ud_direc_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_usuar__ud_u___41EDCAC5">
+          <End Role="tbl_usuario" Type="Self.tbl_usuario" Multiplicity="0..1" />
+          <End Role="tbl_usuario_direccion" Type="Self.tbl_usuario_direccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_usuario">
+              <PropertyRef Name="u_id" />
+            </Principal>
+            <Dependent Role="tbl_usuario_direccion">
+              <PropertyRef Name="ud_u_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_detalle_compra">
+          <End Role="tbl_compra" Type="Self.tbl_compra" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_detalle_compra" Type="Self.tbl_detalle_compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_compra">
+              <PropertyRef Name="compra_id" />
+            </Principal>
+            <Dependent Role="tbl_detalle_compra">
+              <PropertyRef Name="detalle_fk_compra" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_detalle_producto">
+          <End Role="tbl_producto" Type="Self.tbl_producto" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_detalle_compra" Type="Self.tbl_detalle_compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_producto">
+              <PropertyRef Name="pro_id" />
+            </Principal>
+            <Dependent Role="tbl_detalle_compra">
+              <PropertyRef Name="detalle_fk_producto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbMarketplaceModelStoreContainer">
+          <EntitySet Name="tbl_admin" EntityType="Self.tbl_admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_carrito" EntityType="Self.tbl_carrito" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_categoria" EntityType="Self.tbl_categoria" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_compra" EntityType="Self.tbl_compra" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_detalle_compra" EntityType="Self.tbl_detalle_compra" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_direccion" EntityType="Self.tbl_direccion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_pago" EntityType="Self.tbl_pago" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_producto" EntityType="Self.tbl_producto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_usuario" EntityType="Self.tbl_usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_usuario_direccion" EntityType="Self.tbl_usuario_direccion" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__tbl_carri__carri__4A8310C6" Association="Self.FK__tbl_carri__carri__4A8310C6">
+            <End Role="tbl_usuario" EntitySet="tbl_usuario" />
+            <End Role="tbl_carrito" EntitySet="tbl_carrito" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_carri__carri__4B7734FF" Association="Self.FK__tbl_carri__carri__4B7734FF">
+            <End Role="tbl_producto" EntitySet="tbl_producto" />
+            <End Role="tbl_carrito" EntitySet="tbl_carrito" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_categ__cat_f__3A81B327" Association="Self.FK__tbl_categ__cat_f__3A81B327">
+            <End Role="tbl_admin" EntitySet="tbl_admin" />
+            <End Role="tbl_categoria" EntitySet="tbl_categoria" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_compr__compr__503BEA1C" Association="Self.FK__tbl_compr__compr__503BEA1C">
+            <End Role="tbl_usuario" EntitySet="tbl_usuario" />
+            <End Role="tbl_compra" EntitySet="tbl_compra" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_compr__compr__51300E55" Association="Self.FK__tbl_compr__compr__51300E55">
+            <End Role="tbl_usuario_direccion" EntitySet="tbl_usuario_direccion" />
+            <End Role="tbl_compra" EntitySet="tbl_compra" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_pago__pago_f__55009F39" Association="Self.FK__tbl_pago__pago_f__55009F39">
+            <End Role="tbl_compra" EntitySet="tbl_compra" />
+            <End Role="tbl_pago" EntitySet="tbl_pago" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_produ__pro_f__46B27FE2" Association="Self.FK__tbl_produ__pro_f__46B27FE2">
+            <End Role="tbl_usuario" EntitySet="tbl_usuario" />
+            <End Role="tbl_producto" EntitySet="tbl_producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_produ__pro_f__47A6A41B" Association="Self.FK__tbl_produ__pro_f__47A6A41B">
+            <End Role="tbl_categoria" EntitySet="tbl_categoria" />
+            <End Role="tbl_producto" EntitySet="tbl_producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_usuar__ud_di__42E1EEFE" Association="Self.FK__tbl_usuar__ud_di__42E1EEFE">
+            <End Role="tbl_direccion" EntitySet="tbl_direccion" />
+            <End Role="tbl_usuario_direccion" EntitySet="tbl_usuario_direccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_usuar__ud_u___41EDCAC5" Association="Self.FK__tbl_usuar__ud_u___41EDCAC5">
+            <End Role="tbl_usuario" EntitySet="tbl_usuario" />
+            <End Role="tbl_usuario_direccion" EntitySet="tbl_usuario_direccion" />
+          </AssociationSet>
+          <AssociationSet Name="fk_detalle_compra" Association="Self.fk_detalle_compra">
+            <End Role="tbl_compra" EntitySet="tbl_compra" />
+            <End Role="tbl_detalle_compra" EntitySet="tbl_detalle_compra" />
+          </AssociationSet>
+          <AssociationSet Name="fk_detalle_producto" Association="Self.fk_detalle_producto">
+            <End Role="tbl_producto" EntitySet="tbl_producto" />
+            <End Role="tbl_detalle_compra" EntitySet="tbl_detalle_compra" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbMarketplaceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_admin">
+          <Key>
+            <PropertyRef Name="ad_id" />
+          </Key>
+          <Property Name="ad_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ad_usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ad_clave" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="tbl_categoria" Relationship="Self.FK__tbl_categ__cat_f__3A81B327" FromRole="tbl_admin" ToRole="tbl_categoria" />
+        </EntityType>
+        <EntityType Name="tbl_carrito">
+          <Key>
+            <PropertyRef Name="carrito_id" />
+          </Key>
+          <Property Name="carrito_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="carrito_fk_usuario" Type="Int32" />
+          <Property Name="carrito_fk_producto" Type="Int32" />
+          <Property Name="carrito_cantidad" Type="Int32" Nullable="false" />
+          <Property Name="carrito_fecha" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tbl_usuario" Relationship="Self.FK__tbl_carri__carri__4A8310C6" FromRole="tbl_carrito" ToRole="tbl_usuario" />
+          <NavigationProperty Name="tbl_producto" Relationship="Self.FK__tbl_carri__carri__4B7734FF" FromRole="tbl_carrito" ToRole="tbl_producto" />
+        </EntityType>
+        <EntityType Name="tbl_categoria">
+          <Key>
+            <PropertyRef Name="cat_id" />
+          </Key>
+          <Property Name="cat_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cat_nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cat_imagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cat_fk_ad" Type="Int32" />
+          <Property Name="cat_estado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbl_admin" Relationship="Self.FK__tbl_categ__cat_f__3A81B327" FromRole="tbl_categoria" ToRole="tbl_admin" />
+          <NavigationProperty Name="tbl_producto" Relationship="Self.FK__tbl_produ__pro_f__47A6A41B" FromRole="tbl_categoria" ToRole="tbl_producto" />
+        </EntityType>
+        <EntityType Name="tbl_compra">
+          <Key>
+            <PropertyRef Name="compra_id" />
+          </Key>
+          <Property Name="compra_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="compra_fk_usuario" Type="Int32" Nullable="false" />
+          <Property Name="compra_fk_direccion" Type="Int32" Nullable="false" />
+          <Property Name="compra_fecha" Type="DateTime" Precision="3" />
+          <Property Name="compra_total" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="compra_metodo_pago" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="compra_observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tbl_usuario" Relationship="Self.FK__tbl_compr__compr__503BEA1C" FromRole="tbl_compra" ToRole="tbl_usuario" />
+          <NavigationProperty Name="tbl_usuario_direccion" Relationship="Self.FK__tbl_compr__compr__51300E55" FromRole="tbl_compra" ToRole="tbl_usuario_direccion" />
+          <NavigationProperty Name="tbl_pago" Relationship="Self.FK__tbl_pago__pago_f__55009F39" FromRole="tbl_compra" ToRole="tbl_pago" />
+          <NavigationProperty Name="tbl_detalle_compra" Relationship="Self.fk_detalle_compra" FromRole="tbl_compra" ToRole="tbl_detalle_compra" />
+        </EntityType>
+        <EntityType Name="tbl_detalle_compra">
+          <Key>
+            <PropertyRef Name="detalle_id" />
+          </Key>
+          <Property Name="detalle_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="detalle_fk_compra" Type="Int32" Nullable="false" />
+          <Property Name="detalle_fk_producto" Type="Int32" Nullable="false" />
+          <Property Name="detalle_cantidad" Type="Int32" Nullable="false" />
+          <Property Name="detalle_precio_unitario" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+          <NavigationProperty Name="tbl_compra" Relationship="Self.fk_detalle_compra" FromRole="tbl_detalle_compra" ToRole="tbl_compra" />
+          <NavigationProperty Name="tbl_producto" Relationship="Self.fk_detalle_producto" FromRole="tbl_detalle_compra" ToRole="tbl_producto" />
+        </EntityType>
+        <EntityType Name="tbl_direccion">
+          <Key>
+            <PropertyRef Name="direc_id" />
+          </Key>
+          <Property Name="direc_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="direc_pais" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="direc_provincia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="direc_distrito" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="direc_postal" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="direc_linea1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="direc_linea2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tbl_usuario_direccion" Relationship="Self.FK__tbl_usuar__ud_di__42E1EEFE" FromRole="tbl_direccion" ToRole="tbl_usuario_direccion" />
+        </EntityType>
+        <EntityType Name="tbl_pago">
+          <Key>
+            <PropertyRef Name="pago_id" />
+          </Key>
+          <Property Name="pago_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pago_tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pago_tarjeta" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pago_caducidad" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pago_cvv" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pago_fk_compra" Type="Int32" Nullable="false" />
+          <Property Name="pago_fecha" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tbl_compra" Relationship="Self.FK__tbl_pago__pago_f__55009F39" FromRole="tbl_pago" ToRole="tbl_compra" />
+        </EntityType>
+        <EntityType Name="tbl_producto">
+          <Key>
+            <PropertyRef Name="pro_id" />
+          </Key>
+          <Property Name="pro_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pro_nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pro_imagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pro_descrip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pro_precio" Type="Int32" />
+          <Property Name="pro_fk_user" Type="Int32" />
+          <Property Name="pro_fk_cat" Type="Int32" />
+          <NavigationProperty Name="tbl_carrito" Relationship="Self.FK__tbl_carri__carri__4B7734FF" FromRole="tbl_producto" ToRole="tbl_carrito" />
+          <NavigationProperty Name="tbl_categoria" Relationship="Self.FK__tbl_produ__pro_f__47A6A41B" FromRole="tbl_producto" ToRole="tbl_categoria" />
+          <NavigationProperty Name="tbl_detalle_compra" Relationship="Self.fk_detalle_producto" FromRole="tbl_producto" ToRole="tbl_detalle_compra" />
+          <NavigationProperty Name="tbl_usuario" Relationship="Self.FK__tbl_produ__pro_f__46B27FE2" FromRole="tbl_producto" ToRole="tbl_usuario" />
+        </EntityType>
+        <EntityType Name="tbl_usuario">
+          <Key>
+            <PropertyRef Name="u_id" />
+          </Key>
+          <Property Name="u_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="u_nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="u_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="u_clave" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="u_imagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="u_contacto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="u_descrip" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tbl_carrito" Relationship="Self.FK__tbl_carri__carri__4A8310C6" FromRole="tbl_usuario" ToRole="tbl_carrito" />
+          <NavigationProperty Name="tbl_compra" Relationship="Self.FK__tbl_compr__compr__503BEA1C" FromRole="tbl_usuario" ToRole="tbl_compra" />
+          <NavigationProperty Name="tbl_producto" Relationship="Self.FK__tbl_produ__pro_f__46B27FE2" FromRole="tbl_usuario" ToRole="tbl_producto" />
+          <NavigationProperty Name="tbl_usuario_direccion" Relationship="Self.FK__tbl_usuar__ud_u___41EDCAC5" FromRole="tbl_usuario" ToRole="tbl_usuario_direccion" />
+        </EntityType>
+        <EntityType Name="tbl_usuario_direccion">
+          <Key>
+            <PropertyRef Name="ud_id" />
+          </Key>
+          <Property Name="ud_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ud_u_id" Type="Int32" />
+          <Property Name="ud_direc_id" Type="Int32" />
+          <Property Name="ud_activa" Type="Boolean" />
+          <NavigationProperty Name="tbl_compra" Relationship="Self.FK__tbl_compr__compr__51300E55" FromRole="tbl_usuario_direccion" ToRole="tbl_compra" />
+          <NavigationProperty Name="tbl_direccion" Relationship="Self.FK__tbl_usuar__ud_di__42E1EEFE" FromRole="tbl_usuario_direccion" ToRole="tbl_direccion" />
+          <NavigationProperty Name="tbl_usuario" Relationship="Self.FK__tbl_usuar__ud_u___41EDCAC5" FromRole="tbl_usuario_direccion" ToRole="tbl_usuario" />
+        </EntityType>
+        <Association Name="FK__tbl_categ__cat_f__3A81B327">
+          <End Role="tbl_admin" Type="Self.tbl_admin" Multiplicity="0..1" />
+          <End Role="tbl_categoria" Type="Self.tbl_categoria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_admin">
+              <PropertyRef Name="ad_id" />
+            </Principal>
+            <Dependent Role="tbl_categoria">
+              <PropertyRef Name="cat_fk_ad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_carri__carri__4A8310C6">
+          <End Role="tbl_usuario" Type="Self.tbl_usuario" Multiplicity="0..1" />
+          <End Role="tbl_carrito" Type="Self.tbl_carrito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_usuario">
+              <PropertyRef Name="u_id" />
+            </Principal>
+            <Dependent Role="tbl_carrito">
+              <PropertyRef Name="carrito_fk_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_carri__carri__4B7734FF">
+          <End Role="tbl_producto" Type="Self.tbl_producto" Multiplicity="0..1" />
+          <End Role="tbl_carrito" Type="Self.tbl_carrito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_producto">
+              <PropertyRef Name="pro_id" />
+            </Principal>
+            <Dependent Role="tbl_carrito">
+              <PropertyRef Name="carrito_fk_producto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_produ__pro_f__47A6A41B">
+          <End Role="tbl_categoria" Type="Self.tbl_categoria" Multiplicity="0..1" />
+          <End Role="tbl_producto" Type="Self.tbl_producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_categoria">
+              <PropertyRef Name="cat_id" />
+            </Principal>
+            <Dependent Role="tbl_producto">
+              <PropertyRef Name="pro_fk_cat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_compr__compr__503BEA1C">
+          <End Role="tbl_usuario" Type="Self.tbl_usuario" Multiplicity="1" />
+          <End Role="tbl_compra" Type="Self.tbl_compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_usuario">
+              <PropertyRef Name="u_id" />
+            </Principal>
+            <Dependent Role="tbl_compra">
+              <PropertyRef Name="compra_fk_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_compr__compr__51300E55">
+          <End Role="tbl_usuario_direccion" Type="Self.tbl_usuario_direccion" Multiplicity="1" />
+          <End Role="tbl_compra" Type="Self.tbl_compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_usuario_direccion">
+              <PropertyRef Name="ud_id" />
+            </Principal>
+            <Dependent Role="tbl_compra">
+              <PropertyRef Name="compra_fk_direccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_pago__pago_f__55009F39">
+          <End Role="tbl_compra" Type="Self.tbl_compra" Multiplicity="1" />
+          <End Role="tbl_pago" Type="Self.tbl_pago" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_compra">
+              <PropertyRef Name="compra_id" />
+            </Principal>
+            <Dependent Role="tbl_pago">
+              <PropertyRef Name="pago_fk_compra" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_detalle_compra">
+          <End Role="tbl_compra" Type="Self.tbl_compra" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_detalle_compra" Type="Self.tbl_detalle_compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_compra">
+              <PropertyRef Name="compra_id" />
+            </Principal>
+            <Dependent Role="tbl_detalle_compra">
+              <PropertyRef Name="detalle_fk_compra" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_detalle_producto">
+          <End Role="tbl_producto" Type="Self.tbl_producto" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_detalle_compra" Type="Self.tbl_detalle_compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_producto">
+              <PropertyRef Name="pro_id" />
+            </Principal>
+            <Dependent Role="tbl_detalle_compra">
+              <PropertyRef Name="detalle_fk_producto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_usuar__ud_di__42E1EEFE">
+          <End Role="tbl_direccion" Type="Self.tbl_direccion" Multiplicity="0..1" />
+          <End Role="tbl_usuario_direccion" Type="Self.tbl_usuario_direccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_direccion">
+              <PropertyRef Name="direc_id" />
+            </Principal>
+            <Dependent Role="tbl_usuario_direccion">
+              <PropertyRef Name="ud_direc_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_produ__pro_f__46B27FE2">
+          <End Role="tbl_usuario" Type="Self.tbl_usuario" Multiplicity="0..1" />
+          <End Role="tbl_producto" Type="Self.tbl_producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_usuario">
+              <PropertyRef Name="u_id" />
+            </Principal>
+            <Dependent Role="tbl_producto">
+              <PropertyRef Name="pro_fk_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tbl_usuar__ud_u___41EDCAC5">
+          <End Role="tbl_usuario" Type="Self.tbl_usuario" Multiplicity="0..1" />
+          <End Role="tbl_usuario_direccion" Type="Self.tbl_usuario_direccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_usuario">
+              <PropertyRef Name="u_id" />
+            </Principal>
+            <Dependent Role="tbl_usuario_direccion">
+              <PropertyRef Name="ud_u_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbMarketplaceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_admin" EntityType="Self.tbl_admin" />
+          <EntitySet Name="tbl_carrito" EntityType="Self.tbl_carrito" />
+          <EntitySet Name="tbl_categoria" EntityType="Self.tbl_categoria" />
+          <EntitySet Name="tbl_compra" EntityType="Self.tbl_compra" />
+          <EntitySet Name="tbl_detalle_compra" EntityType="Self.tbl_detalle_compra" />
+          <EntitySet Name="tbl_direccion" EntityType="Self.tbl_direccion" />
+          <EntitySet Name="tbl_pago" EntityType="Self.tbl_pago" />
+          <EntitySet Name="tbl_producto" EntityType="Self.tbl_producto" />
+          <EntitySet Name="tbl_usuario" EntityType="Self.tbl_usuario" />
+          <EntitySet Name="tbl_usuario_direccion" EntityType="Self.tbl_usuario_direccion" />
+          <AssociationSet Name="FK__tbl_categ__cat_f__3A81B327" Association="Self.FK__tbl_categ__cat_f__3A81B327">
+            <End Role="tbl_admin" EntitySet="tbl_admin" />
+            <End Role="tbl_categoria" EntitySet="tbl_categoria" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_carri__carri__4A8310C6" Association="Self.FK__tbl_carri__carri__4A8310C6">
+            <End Role="tbl_usuario" EntitySet="tbl_usuario" />
+            <End Role="tbl_carrito" EntitySet="tbl_carrito" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_carri__carri__4B7734FF" Association="Self.FK__tbl_carri__carri__4B7734FF">
+            <End Role="tbl_producto" EntitySet="tbl_producto" />
+            <End Role="tbl_carrito" EntitySet="tbl_carrito" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_produ__pro_f__47A6A41B" Association="Self.FK__tbl_produ__pro_f__47A6A41B">
+            <End Role="tbl_categoria" EntitySet="tbl_categoria" />
+            <End Role="tbl_producto" EntitySet="tbl_producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_compr__compr__503BEA1C" Association="Self.FK__tbl_compr__compr__503BEA1C">
+            <End Role="tbl_usuario" EntitySet="tbl_usuario" />
+            <End Role="tbl_compra" EntitySet="tbl_compra" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_compr__compr__51300E55" Association="Self.FK__tbl_compr__compr__51300E55">
+            <End Role="tbl_usuario_direccion" EntitySet="tbl_usuario_direccion" />
+            <End Role="tbl_compra" EntitySet="tbl_compra" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_pago__pago_f__55009F39" Association="Self.FK__tbl_pago__pago_f__55009F39">
+            <End Role="tbl_compra" EntitySet="tbl_compra" />
+            <End Role="tbl_pago" EntitySet="tbl_pago" />
+          </AssociationSet>
+          <AssociationSet Name="fk_detalle_compra" Association="Self.fk_detalle_compra">
+            <End Role="tbl_compra" EntitySet="tbl_compra" />
+            <End Role="tbl_detalle_compra" EntitySet="tbl_detalle_compra" />
+          </AssociationSet>
+          <AssociationSet Name="fk_detalle_producto" Association="Self.fk_detalle_producto">
+            <End Role="tbl_producto" EntitySet="tbl_producto" />
+            <End Role="tbl_detalle_compra" EntitySet="tbl_detalle_compra" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_usuar__ud_di__42E1EEFE" Association="Self.FK__tbl_usuar__ud_di__42E1EEFE">
+            <End Role="tbl_direccion" EntitySet="tbl_direccion" />
+            <End Role="tbl_usuario_direccion" EntitySet="tbl_usuario_direccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_produ__pro_f__46B27FE2" Association="Self.FK__tbl_produ__pro_f__46B27FE2">
+            <End Role="tbl_usuario" EntitySet="tbl_usuario" />
+            <End Role="tbl_producto" EntitySet="tbl_producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_usuar__ud_u___41EDCAC5" Association="Self.FK__tbl_usuar__ud_u___41EDCAC5">
+            <End Role="tbl_usuario" EntitySet="tbl_usuario" />
+            <End Role="tbl_usuario_direccion" EntitySet="tbl_usuario_direccion" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbMarketplaceModelStoreContainer" CdmEntityContainer="dbMarketplaceEntities">
+          <EntitySetMapping Name="tbl_admin">
+            <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_admin">
+              <MappingFragment StoreEntitySet="tbl_admin">
+                <ScalarProperty Name="ad_id" ColumnName="ad_id" />
+                <ScalarProperty Name="ad_usuario" ColumnName="ad_usuario" />
+                <ScalarProperty Name="ad_clave" ColumnName="ad_clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_carrito">
+            <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_carrito">
+              <MappingFragment StoreEntitySet="tbl_carrito">
+                <ScalarProperty Name="carrito_id" ColumnName="carrito_id" />
+                <ScalarProperty Name="carrito_fk_usuario" ColumnName="carrito_fk_usuario" />
+                <ScalarProperty Name="carrito_fk_producto" ColumnName="carrito_fk_producto" />
+                <ScalarProperty Name="carrito_cantidad" ColumnName="carrito_cantidad" />
+                <ScalarProperty Name="carrito_fecha" ColumnName="carrito_fecha" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_categoria">
+            <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_categoria">
+              <MappingFragment StoreEntitySet="tbl_categoria">
+                <ScalarProperty Name="cat_id" ColumnName="cat_id" />
+                <ScalarProperty Name="cat_nombre" ColumnName="cat_nombre" />
+                <ScalarProperty Name="cat_imagen" ColumnName="cat_imagen" />
+                <ScalarProperty Name="cat_fk_ad" ColumnName="cat_fk_ad" />
+                <ScalarProperty Name="cat_estado" ColumnName="cat_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_compra">
+            <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_compra">
+              <MappingFragment StoreEntitySet="tbl_compra">
+                <ScalarProperty Name="compra_id" ColumnName="compra_id" />
+                <ScalarProperty Name="compra_fk_usuario" ColumnName="compra_fk_usuario" />
+                <ScalarProperty Name="compra_fk_direccion" ColumnName="compra_fk_direccion" />
+                <ScalarProperty Name="compra_fecha" ColumnName="compra_fecha" />
+                <ScalarProperty Name="compra_total" ColumnName="compra_total" />
+                <ScalarProperty Name="compra_metodo_pago" ColumnName="compra_metodo_pago" />
+                <ScalarProperty Name="compra_observaciones" ColumnName="compra_observaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_detalle_compra">
+            <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_detalle_compra">
+              <MappingFragment StoreEntitySet="tbl_detalle_compra">
+                <ScalarProperty Name="detalle_id" ColumnName="detalle_id" />
+                <ScalarProperty Name="detalle_fk_compra" ColumnName="detalle_fk_compra" />
+                <ScalarProperty Name="detalle_fk_producto" ColumnName="detalle_fk_producto" />
+                <ScalarProperty Name="detalle_cantidad" ColumnName="detalle_cantidad" />
+                <ScalarProperty Name="detalle_precio_unitario" ColumnName="detalle_precio_unitario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_direccion">
+            <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_direccion">
+              <MappingFragment StoreEntitySet="tbl_direccion">
+                <ScalarProperty Name="direc_id" ColumnName="direc_id" />
+                <ScalarProperty Name="direc_pais" ColumnName="direc_pais" />
+                <ScalarProperty Name="direc_provincia" ColumnName="direc_provincia" />
+                <ScalarProperty Name="direc_distrito" ColumnName="direc_distrito" />
+                <ScalarProperty Name="direc_postal" ColumnName="direc_postal" />
+                <ScalarProperty Name="direc_linea1" ColumnName="direc_linea1" />
+                <ScalarProperty Name="direc_linea2" ColumnName="direc_linea2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_pago">
+            <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_pago">
+              <MappingFragment StoreEntitySet="tbl_pago">
+                <ScalarProperty Name="pago_id" ColumnName="pago_id" />
+                <ScalarProperty Name="pago_tipo" ColumnName="pago_tipo" />
+                <ScalarProperty Name="pago_tarjeta" ColumnName="pago_tarjeta" />
+                <ScalarProperty Name="pago_caducidad" ColumnName="pago_caducidad" />
+                <ScalarProperty Name="pago_cvv" ColumnName="pago_cvv" />
+                <ScalarProperty Name="pago_fk_compra" ColumnName="pago_fk_compra" />
+                <ScalarProperty Name="pago_fecha" ColumnName="pago_fecha" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_producto">
+            <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_producto">
+              <MappingFragment StoreEntitySet="tbl_producto">
+                <ScalarProperty Name="pro_id" ColumnName="pro_id" />
+                <ScalarProperty Name="pro_nombre" ColumnName="pro_nombre" />
+                <ScalarProperty Name="pro_imagen" ColumnName="pro_imagen" />
+                <ScalarProperty Name="pro_descrip" ColumnName="pro_descrip" />
+                <ScalarProperty Name="pro_precio" ColumnName="pro_precio" />
+                <ScalarProperty Name="pro_fk_user" ColumnName="pro_fk_user" />
+                <ScalarProperty Name="pro_fk_cat" ColumnName="pro_fk_cat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_usuario">
+            <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_usuario">
+              <MappingFragment StoreEntitySet="tbl_usuario">
+                <ScalarProperty Name="u_id" ColumnName="u_id" />
+                <ScalarProperty Name="u_nombre" ColumnName="u_nombre" />
+                <ScalarProperty Name="u_email" ColumnName="u_email" />
+                <ScalarProperty Name="u_clave" ColumnName="u_clave" />
+                <ScalarProperty Name="u_imagen" ColumnName="u_imagen" />
+                <ScalarProperty Name="u_contacto" ColumnName="u_contacto" />
+                <ScalarProperty Name="u_descrip" ColumnName="u_descrip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_usuario_direccion">
+            <EntityTypeMapping TypeName="dbMarketplaceModel.tbl_usuario_direccion">
+              <MappingFragment StoreEntitySet="tbl_usuario_direccion">
+                <ScalarProperty Name="ud_id" ColumnName="ud_id" />
+                <ScalarProperty Name="ud_u_id" ColumnName="ud_u_id" />
+                <ScalarProperty Name="ud_direc_id" ColumnName="ud_direc_id" />
+                <ScalarProperty Name="ud_activa" ColumnName="ud_activa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

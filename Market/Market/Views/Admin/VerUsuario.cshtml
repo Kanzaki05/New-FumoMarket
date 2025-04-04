@@ -1,0 +1,108 @@
+﻿@model Market.Models.VerUsuario
+
+@{
+    ViewBag.Title = "VerUsuario";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    body {
+        background-color: #243b55;
+        color: #fff;
+        font-family: sans-serif;
+    }
+
+    h1, h2, h3 {
+        color: #fff;
+    }
+
+    p {
+        color: #fff;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .img-responsive {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .usuario-info {
+        max-width: 300px;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+    }
+
+    .producto {
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .publicaciones {
+        align-items: center;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+    }
+</style>
+
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <h1 style="text-align:center">Detalles del Usuario</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="usuario-info">
+        <img src="@Url.Content(@Model.u_imagen)" class="img img-responsive" />
+        <h2>@Model.u_nombre</h2>
+        <p>Email: @Model.u_email</p>
+        <p>Contacto: @Model.u_contacto</p>
+        <p class="card-text">@Model.u_descrip</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <h1 style="text-align:center">Productos del Usuario</h1>
+    </div>
+</div>
+
+<div class="row">
+    @if (Model.Productos != null && Model.Productos.Any())
+    {
+        foreach (var producto in Model.Productos)
+        {
+            <div class="col-lg-4 col-md-4 producto">
+                <div class="publicaciones">
+                    <h3>@producto.pro_nombre</h3>
+                    <img src="@Url.Content(producto.pro_imagen)" class="img img-responsive" style="width: 100px; height: 100px;" />
+                    <p>Precio S/.@producto.pro_precio</p>
+                    <p>Categoría: @producto.cat_nombre</p>
+                    <p>Descripción: @producto.pro_descrip</p>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    @Html.ActionLink("Eliminar Publicación", "DeleteProducto", new { id = producto.pro_id },
+                        new { @class = "btn btn-danger btn-sm", onclick = "return confirm('¿Estás seguro de eliminar esta publicación?');" })
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="col-lg-12 col-md-12">
+            <p>No hay productos asociados a este usuario.</p>
+        </div>
+    }
+</div>
+<div class="col-lg-6 col-md-6">
+    @Html.ActionLink("Eliminar", "DeleteUsuario", new { id = Model.u_id }, new { @class = "btn btn-danger btn-sm" })
+</div>

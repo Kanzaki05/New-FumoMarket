@@ -1,0 +1,70 @@
+﻿@using PagedList.Mvc
+@model Market.Models.VerUsuarioConPedidos
+
+@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<link href="~/Content/perfilstyle.css" rel="stylesheet" />
+<link href="~/Content/footerstyle.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Información del Usuario -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="@Url.Content(Model.Usuario.u_imagen)" class="card-img-top img-thumbnail" alt="Imagen de usuario">
+                <div class="card-body text-center">
+                    <h5 class="card-title">@Model.Usuario.u_nombre</h5>
+                    <p class="card-text">@Model.Usuario.u_email</p>
+                    <p class="card-text">@Model.Usuario.u_contacto</p>
+                    <p class="card-text">@Model.Usuario.u_descrip</p>
+                    <a href="@Url.Action("EditarPerfil", "Usuario", new { id = Model.Usuario.u_id })" class="btn btn-primary btn-block">Editar Perfil</a>
+                    <a href="@Url.Action("MiPerfil", "Usuario", new { id = Model.Usuario.u_id })" class="btn btn-primary btn-block">Mis Productos</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Pedidos del Usuario -->
+        <div class="col-md-8">
+            <h3>Mis Pedidos</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID Pedido</th>
+                        <th>Dirección</th>
+                        <th>Total</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @if (Model.Pedidos != null && Model.Pedidos.Any())
+                    {
+                        foreach (var pedido in Model.Pedidos)
+                        {
+                            <tr>
+                                <td>@pedido.NumeroPedido</td>
+                                <td>@pedido.Pais, @pedido.Provincia, @pedido.Distrito</td>
+                                <td>S/. @pedido.PrecioTotal</td>
+                                <td>@Convert.ToDateTime(pedido.FechaCompra).ToString("dd/MM/yyyy")</td>
+                                <td>
+                                    <a href="@Url.Action("VerPedido", "Usuario", new { id = pedido.NumeroPedido })" class="btn btn-info btn-sm">Ver Pedido</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center">No tienes pedidos aún.</td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>

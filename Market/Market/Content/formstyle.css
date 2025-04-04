@@ -1,0 +1,122 @@
+/* Estilos generales */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal centrado */
+#main-div {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#box {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Título principal del formulario */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+/* Estilos de formulario */
+.form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de las agrupaciones del formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-group-addon {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input.form-control, textarea.form-control, select.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+/* Estilos de los mensajes de validación */
+span.validation-message {
+    color: red;
+}
+
+/* Estilo de los botones */
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+    .btn-success:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+    }
+
+/* Mensajes de error */
+.form-group p {
+    color: red;
+    font-size: 1rem;
+}
+
+/* Estilo de la paginación (si se necesita) */
+.pagination-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+    .pagination li {
+        display: inline;
+        margin: 0 5px;
+    }
+
+    .pagination a, .pagination span {
+        padding: 8px 12px;
+        border: 1px solid #007bff;
+        border-radius: 5px;
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .pagination .active span {
+        background-color: #007bff;
+        color: #fff;
+        border-color: #007bff;
+    }
+
+    .pagination a:hover {
+        background-color: #007bff;
+        color: #fff;
+    }

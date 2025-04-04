@@ -1,0 +1,80 @@
+﻿@model Market.Models.VerPublicacion
+@{
+    ViewBag.Title = "VerPublicacion";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link href="~/Content/verpublicacion.css" rel="stylesheet">
+    <link href="~/Content/footerstyle.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Sección de la Imagen -->
+        <div class="imag">
+            <img src="@Url.Content(@Model.pro_imagen)" class="imagen" />
+        </div>
+
+        <!-- Sección de Información -->
+        <div class="info">
+            <h1>@Model.pro_nombre</h1>
+
+            <div>
+                <h2>Descripción:</h2>
+                <p>@Model.pro_descrip</p>
+            </div>
+
+            <table>
+                <tr>
+                    <td class="navi">Categoría:</td>
+                    <td>@Model.cat_nombre</td>
+                </tr>
+                <tr>
+                    <td class="navi">Autor:</td>
+                    <td>@Model.u_nombre <img src="@Url.Content(@Model.u_imagen)" style="width:40px; height:40px" /></td>
+                </tr>
+                <tr>
+                    <td class="navi">Contacto:</td>
+                    <td>@Model.u_contacto</td>
+                </tr>
+                <tr>
+                    <td class="navi"><h1>Precio S/.</h1></td>
+                    <td><h1>@Model.pro_precio</h1></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        @if (Convert.ToInt32(Session["u_id"]) == Convert.ToInt32(Model.pro_fk_user))
+                        {
+                            <div class="buton">
+                                @Html.ActionLink("Eliminar Publicación", "DeletePublic", new { id = Model.pro_id }, new { @class = "btn btn-danger btn-sm" })
+                                @Html.ActionLink("Modificar Publicación", "ModificarPublicacion", new { id = Model.pro_id }, new { @class = "btn btn-danger btn-sm" })
+                            </div>
+                        }
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "04078241-0748-45f1-8c77-9acf138f5e72", // The ID of this integration.
+            region: "au-syd", // The region your integration is hosted in.
+            serviceInstanceID: "72d29ea4-df35-41a2-827e-57d7f66a9aad", // The ID of your service instance.
+            onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        });
+    </script>
+</body>
+</html>

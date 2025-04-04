@@ -1,0 +1,801 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|c:\\users\\sahir - pc\\desktop\\market perfil\\market\\market\\models\\modelotablas.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\models\\modelotablas.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|c:\\users\\sahir - pc\\desktop\\market perfil\\market\\market\\models\\verpedidomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\models\\verpedidomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\models\\verpublicacionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\models\\verpublicacionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\models\\verusuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\models\\verusuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|c:\\users\\sahir - pc\\desktop\\market perfil\\market\\market\\models\\verusuarioconpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\models\\verusuarioconpedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|c:\\users\\sahir - pc\\desktop\\market perfil\\market\\market\\views\\carrito\\vercarrito.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\carrito\\vercarrito.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\carrito\\compraform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\carrito\\compraform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\usuario\\editarperfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\usuario\\editarperfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\usuario\\createpublic.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\usuario\\createpublic.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|c:\\users\\sahir - pc\\desktop\\market perfil\\market\\market\\views\\usuario\\mispedidos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\usuario\\mispedidos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\usuario\\modificarpublicacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\usuario\\modificarpublicacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|c:\\users\\sahir - pc\\desktop\\market perfil\\market\\market\\views\\usuario\\registrar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\usuario\\registrar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\usuario\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\usuario\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\admin\\verusuario.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\admin\\verusuario.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\admin\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\admin\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\admin\\categoria.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\admin\\categoria.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\admin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\admin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\usuario\\verpublicacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\usuario\\verpublicacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|c:\\users\\sahir - pc\\desktop\\market perfil\\market\\market\\views\\usuario\\verpedido.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\usuario\\verpedido.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\usuario\\miperfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\usuario\\miperfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\usuario\\publicaciones.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\usuario\\publicaciones.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\shared\\_layout1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\shared\\_layout1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\content\\publicacionesstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\content\\publicacionesstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\content\\modificarpublicacion.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\content\\modificarpublicacion.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\content\\editarstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\content\\editarstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\content\\indexstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\content\\indexstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\content\\perfilstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\content\\perfilstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\content\\layoutstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\content\\layoutstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\content\\verpublicacion.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\content\\verpublicacion.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\content\\registerstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\content\\registerstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\content\\footerstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\content\\footerstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\content\\carritostyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\content\\carritostyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\content\\comprastyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\content\\comprastyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\content\\carousel.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\content\\carousel.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\market\\content\\paginition.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{90982DE1-F05B-4F92-AEE8-D63011B3F0EB}|Market\\Market.csproj|solutionrelative:market\\content\\paginition.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VerPedidoModel.cs",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Models\\VerPedidoModel.cs",
+              "RelativeDocumentMoniker": "Market\\Models\\VerPedidoModel.cs",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Models\\VerPedidoModel.cs",
+              "RelativeToolTip": "Market\\Models\\VerPedidoModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T05:04:20.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Market\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Market\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAiwKIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T10:36:30.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ModeloTablas.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Models\\ModeloTablas.edmx",
+              "RelativeDocumentMoniker": "Market\\Models\\ModeloTablas.edmx",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Models\\ModeloTablas.edmx [Diagram1]",
+              "RelativeToolTip": "Market\\Models\\ModeloTablas.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-12-18T04:39:27.409Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Market\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "Market\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAFwCAAAAAAAAAADwvycBAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T21:34:52.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CarritoController.cs",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Controllers\\CarritoController.cs",
+              "RelativeDocumentMoniker": "Market\\Controllers\\CarritoController.cs",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Controllers\\CarritoController.cs",
+              "RelativeToolTip": "Market\\Controllers\\CarritoController.cs",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAuwFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T21:43:23.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VerPublicacionModel.cs",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Models\\VerPublicacionModel.cs",
+              "RelativeDocumentMoniker": "Market\\Models\\VerPublicacionModel.cs",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Models\\VerPublicacionModel.cs",
+              "RelativeToolTip": "Market\\Models\\VerPublicacionModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T21:34:38.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VerUsuarioModel.cs",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Models\\VerUsuarioModel.cs",
+              "RelativeDocumentMoniker": "Market\\Models\\VerUsuarioModel.cs",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Models\\VerUsuarioModel.cs",
+              "RelativeToolTip": "Market\\Models\\VerUsuarioModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T10:33:57.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VerUsuarioConPedidos.cs",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Models\\VerUsuarioConPedidos.cs",
+              "RelativeDocumentMoniker": "Market\\Models\\VerUsuarioConPedidos.cs",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Models\\VerUsuarioConPedidos.cs",
+              "RelativeToolTip": "Market\\Models\\VerUsuarioConPedidos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T05:42:55.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\Index.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Usuario\\Index.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\Index.cshtml",
+              "RelativeToolTip": "Market\\Views\\Usuario\\Index.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAnwHQAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-17T11:02:56.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CreatePublic.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\CreatePublic.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Usuario\\CreatePublic.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\CreatePublic.cshtml",
+              "RelativeToolTip": "Market\\Views\\Usuario\\CreatePublic.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:32:13.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "VerCarrito.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Carrito\\VerCarrito.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Carrito\\VerCarrito.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Carrito\\VerCarrito.cshtml",
+              "RelativeToolTip": "Market\\Views\\Carrito\\VerCarrito.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T04:41:17.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CompraForm.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Carrito\\CompraForm.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Carrito\\CompraForm.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Carrito\\CompraForm.cshtml",
+              "RelativeToolTip": "Market\\Views\\Carrito\\CompraForm.cshtml",
+              "ViewState": "AgIAAEoAAAAAeAUN4sTUv18AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-17T10:55:54.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EditarPerfil.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\EditarPerfil.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Usuario\\EditarPerfil.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\EditarPerfil.cshtml",
+              "RelativeToolTip": "Market\\Views\\Usuario\\EditarPerfil.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAwIsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-17T13:03:52.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MisPedidos.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\MisPedidos.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Usuario\\MisPedidos.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\MisPedidos.cshtml",
+              "RelativeToolTip": "Market\\Views\\Usuario\\MisPedidos.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAnwEAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T05:02:53.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ModificarPublicacion.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\ModificarPublicacion.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Usuario\\ModificarPublicacion.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\ModificarPublicacion.cshtml",
+              "RelativeToolTip": "Market\\Views\\Usuario\\ModificarPublicacion.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAFMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-17T23:30:39.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Registrar.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\Registrar.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Usuario\\Registrar.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\Registrar.cshtml",
+              "RelativeToolTip": "Market\\Views\\Usuario\\Registrar.cshtml",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAIcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T22:15:20.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\Login.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Usuario\\Login.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\Login.cshtml",
+              "RelativeToolTip": "Market\\Views\\Usuario\\Login.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAApwEQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:32:01.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "VerUsuario.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Admin\\VerUsuario.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Admin\\VerUsuario.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Admin\\VerUsuario.cshtml",
+              "RelativeToolTip": "Market\\Views\\Admin\\VerUsuario.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAwFcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T22:40:16.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Usuarios.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Admin\\Usuarios.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Admin\\Usuarios.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Admin\\Usuarios.cshtml",
+              "RelativeToolTip": "Market\\Views\\Admin\\Usuarios.cshtml",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAwHEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:34:05.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Categoria.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Admin\\Categoria.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Admin\\Categoria.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Admin\\Categoria.cshtml",
+              "RelativeToolTip": "Market\\Views\\Admin\\Categoria.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T21:56:38.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Admin\\Create.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Admin\\Create.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Admin\\Create.cshtml",
+              "RelativeToolTip": "Market\\Views\\Admin\\Create.cshtml",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T21:56:46.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Admin\\Login.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Admin\\Login.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Admin\\Login.cshtml",
+              "RelativeToolTip": "Market\\Views\\Admin\\Login.cshtml",
+              "ViewState": "AgIAAGUAAAAAmuREGJcmwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T21:56:50.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Market\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Market\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T21:56:31.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "VerPublicacion.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\VerPublicacion.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Usuario\\VerPublicacion.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\VerPublicacion.cshtml",
+              "RelativeToolTip": "Market\\Views\\Usuario\\VerPublicacion.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAApwE0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-17T11:20:19.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "VerPedido.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\VerPedido.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Usuario\\VerPedido.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\VerPedido.cshtml",
+              "RelativeToolTip": "Market\\Views\\Usuario\\VerPedido.cshtml",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAnwFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T05:55:49.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "MiPerfil.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\MiPerfil.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Usuario\\MiPerfil.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\MiPerfil.cshtml",
+              "RelativeToolTip": "Market\\Views\\Usuario\\MiPerfil.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:52:30.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Publicaciones.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\Publicaciones.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Usuario\\Publicaciones.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Usuario\\Publicaciones.cshtml",
+              "RelativeToolTip": "Market\\Views\\Usuario\\Publicaciones.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T02:29:19.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "_Layout1.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Shared\\_Layout1.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Shared\\_Layout1.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Shared\\_Layout1.cshtml",
+              "RelativeToolTip": "Market\\Views\\Shared\\_Layout1.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T01:11:00.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Web.config",
+              "RelativeDocumentMoniker": "Market\\Web.config",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Web.config",
+              "RelativeToolTip": "Market\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-12-16T10:29:41.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "publicacionesstyle.css",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\publicacionesstyle.css",
+              "RelativeDocumentMoniker": "Market\\Content\\publicacionesstyle.css",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\publicacionesstyle.css",
+              "RelativeToolTip": "Market\\Content\\publicacionesstyle.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-18T01:48:38.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "modificarpublicacion.css",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\modificarpublicacion.css",
+              "RelativeDocumentMoniker": "Market\\Content\\modificarpublicacion.css",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\modificarpublicacion.css",
+              "RelativeToolTip": "Market\\Content\\modificarpublicacion.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-18T02:45:23.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "editarstyle.css",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\editarstyle.css",
+              "RelativeDocumentMoniker": "Market\\Content\\editarstyle.css",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\editarstyle.css",
+              "RelativeToolTip": "Market\\Content\\editarstyle.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-17T14:02:44.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "indexstyle.css",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\indexstyle.css",
+              "RelativeDocumentMoniker": "Market\\Content\\indexstyle.css",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\indexstyle.css",
+              "RelativeToolTip": "Market\\Content\\indexstyle.css",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAHkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-18T01:07:53.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "perfilstyle.css",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\perfilstyle.css",
+              "RelativeDocumentMoniker": "Market\\Content\\perfilstyle.css",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\perfilstyle.css",
+              "RelativeToolTip": "Market\\Content\\perfilstyle.css",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAkwGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-18T01:30:35.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "layoutstyle.css",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\layoutstyle.css",
+              "RelativeDocumentMoniker": "Market\\Content\\layoutstyle.css",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\layoutstyle.css",
+              "RelativeToolTip": "Market\\Content\\layoutstyle.css",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAkwDEAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-17T23:56:02.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "verpublicacion.css",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\verpublicacion.css",
+              "RelativeDocumentMoniker": "Market\\Content\\verpublicacion.css",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\verpublicacion.css",
+              "RelativeToolTip": "Market\\Content\\verpublicacion.css",
+              "ViewState": "AgIAABEAAAAAAAAAAAAkwB8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-17T11:10:14.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeToolTip": "Market\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:49:02.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Market\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-17T11:19:00.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "Market\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T00:12:33.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "registerstyle.css",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\registerstyle.css",
+              "RelativeDocumentMoniker": "Market\\Content\\registerstyle.css",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\registerstyle.css",
+              "RelativeToolTip": "Market\\Content\\registerstyle.css",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAkwKAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-17T14:00:11.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "footerstyle.css",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\footerstyle.css",
+              "RelativeDocumentMoniker": "Market\\Content\\footerstyle.css",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\footerstyle.css",
+              "RelativeToolTip": "Market\\Content\\footerstyle.css",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAkwD4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-17T23:34:02.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "carritostyle.css",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\carritostyle.css",
+              "RelativeDocumentMoniker": "Market\\Content\\carritostyle.css",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\carritostyle.css",
+              "RelativeToolTip": "Market\\Content\\carritostyle.css",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAkwIIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-17T23:06:27.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "comprastyle.css",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\comprastyle.css",
+              "RelativeDocumentMoniker": "Market\\Content\\comprastyle.css",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\comprastyle.css",
+              "RelativeToolTip": "Market\\Content\\comprastyle.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-17T10:58:52.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "carousel.css",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\carousel.css",
+              "RelativeDocumentMoniker": "Market\\Content\\carousel.css",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\carousel.css",
+              "RelativeToolTip": "Market\\Content\\carousel.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-17T11:17:11.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Market\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Market\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-17T11:05:15.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "paginition.css",
+              "DocumentMoniker": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\paginition.css",
+              "RelativeDocumentMoniker": "Market\\Content\\paginition.css",
+              "ToolTip": "C:\\Users\\SAHIR - PC\\Desktop\\MARKET PERFIL\\Market\\Market\\Content\\paginition.css",
+              "RelativeToolTip": "Market\\Content\\paginition.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-17T10:57:53.758Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

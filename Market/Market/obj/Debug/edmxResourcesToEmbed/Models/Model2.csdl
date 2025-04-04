@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbMarketplaceModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbl_admin">
+    <Key>
+      <PropertyRef Name="ad_id" />
+    </Key>
+    <Property Name="ad_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad_usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ad_clave" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="tbl_categoria" Relationship="Self.FK__tbl_categ__cat_f__3A81B327" FromRole="tbl_admin" ToRole="tbl_categoria" />
+  </EntityType>
+  <EntityType Name="tbl_carrito">
+    <Key>
+      <PropertyRef Name="carrito_id" />
+    </Key>
+    <Property Name="carrito_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="carrito_fk_usuario" Type="Int32" />
+    <Property Name="carrito_fk_producto" Type="Int32" />
+    <Property Name="carrito_cantidad" Type="Int32" Nullable="false" />
+    <Property Name="carrito_fecha" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_usuario" Relationship="Self.FK__tbl_carri__carri__5CD6CB2B" FromRole="tbl_carrito" ToRole="tbl_usuario" />
+    <NavigationProperty Name="tbl_producto" Relationship="Self.FK__tbl_carri__carri__5DCAEF64" FromRole="tbl_carrito" ToRole="tbl_producto" />
+  </EntityType>
+  <EntityType Name="tbl_categoria">
+    <Key>
+      <PropertyRef Name="cat_id" />
+    </Key>
+    <Property Name="cat_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cat_nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="cat_imagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="cat_fk_ad" Type="Int32" />
+    <Property Name="cat_estado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbl_admin" Relationship="Self.FK__tbl_categ__cat_f__3A81B327" FromRole="tbl_categoria" ToRole="tbl_admin" />
+    <NavigationProperty Name="tbl_producto" Relationship="Self.FK__tbl_produ__pro_f__4222D4EF" FromRole="tbl_categoria" ToRole="tbl_producto" />
+  </EntityType>
+  <EntityType Name="tbl_producto">
+    <Key>
+      <PropertyRef Name="pro_id" />
+    </Key>
+    <Property Name="pro_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pro_nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pro_imagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pro_descrip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pro_precio" Type="Int32" />
+    <Property Name="pro_fk_user" Type="Int32" />
+    <Property Name="pro_fk_cat" Type="Int32" />
+    <NavigationProperty Name="tbl_carrito" Relationship="Self.FK__tbl_carri__carri__5DCAEF64" FromRole="tbl_producto" ToRole="tbl_carrito" />
+    <NavigationProperty Name="tbl_categoria" Relationship="Self.FK__tbl_produ__pro_f__4222D4EF" FromRole="tbl_producto" ToRole="tbl_categoria" />
+    <NavigationProperty Name="tbl_usuario" Relationship="Self.FK__tbl_produ__pro_f__412EB0B6" FromRole="tbl_producto" ToRole="tbl_usuario" />
+  </EntityType>
+  <EntityType Name="tbl_usuario">
+    <Key>
+      <PropertyRef Name="u_id" />
+    </Key>
+    <Property Name="u_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="u_nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="u_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="u_clave" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="u_imagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="u_contacto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="tbl_carrito" Relationship="Self.FK__tbl_carri__carri__5CD6CB2B" FromRole="tbl_usuario" ToRole="tbl_carrito" />
+    <NavigationProperty Name="tbl_producto" Relationship="Self.FK__tbl_produ__pro_f__412EB0B6" FromRole="tbl_usuario" ToRole="tbl_producto" />
+  </EntityType>
+  <Association Name="FK__tbl_categ__cat_f__3A81B327">
+    <End Role="tbl_admin" Type="Self.tbl_admin" Multiplicity="0..1" />
+    <End Role="tbl_categoria" Type="Self.tbl_categoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_admin">
+        <PropertyRef Name="ad_id" />
+      </Principal>
+      <Dependent Role="tbl_categoria">
+        <PropertyRef Name="cat_fk_ad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_carri__carri__5CD6CB2B">
+    <End Role="tbl_usuario" Type="Self.tbl_usuario" Multiplicity="0..1" />
+    <End Role="tbl_carrito" Type="Self.tbl_carrito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_usuario">
+        <PropertyRef Name="u_id" />
+      </Principal>
+      <Dependent Role="tbl_carrito">
+        <PropertyRef Name="carrito_fk_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_carri__carri__5DCAEF64">
+    <End Role="tbl_producto" Type="Self.tbl_producto" Multiplicity="0..1" />
+    <End Role="tbl_carrito" Type="Self.tbl_carrito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_producto">
+        <PropertyRef Name="pro_id" />
+      </Principal>
+      <Dependent Role="tbl_carrito">
+        <PropertyRef Name="carrito_fk_producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_produ__pro_f__4222D4EF">
+    <End Role="tbl_categoria" Type="Self.tbl_categoria" Multiplicity="0..1" />
+    <End Role="tbl_producto" Type="Self.tbl_producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_categoria">
+        <PropertyRef Name="cat_id" />
+      </Principal>
+      <Dependent Role="tbl_producto">
+        <PropertyRef Name="pro_fk_cat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_produ__pro_f__412EB0B6">
+    <End Role="tbl_usuario" Type="Self.tbl_usuario" Multiplicity="0..1" />
+    <End Role="tbl_producto" Type="Self.tbl_producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_usuario">
+        <PropertyRef Name="u_id" />
+      </Principal>
+      <Dependent Role="tbl_producto">
+        <PropertyRef Name="pro_fk_user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbMarketplaceEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_admin" EntityType="Self.tbl_admin" />
+    <EntitySet Name="tbl_carrito" EntityType="Self.tbl_carrito" />
+    <EntitySet Name="tbl_categoria" EntityType="Self.tbl_categoria" />
+    <EntitySet Name="tbl_producto" EntityType="Self.tbl_producto" />
+    <EntitySet Name="tbl_usuario" EntityType="Self.tbl_usuario" />
+    <AssociationSet Name="FK__tbl_categ__cat_f__3A81B327" Association="Self.FK__tbl_categ__cat_f__3A81B327">
+      <End Role="tbl_admin" EntitySet="tbl_admin" />
+      <End Role="tbl_categoria" EntitySet="tbl_categoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_carri__carri__5CD6CB2B" Association="Self.FK__tbl_carri__carri__5CD6CB2B">
+      <End Role="tbl_usuario" EntitySet="tbl_usuario" />
+      <End Role="tbl_carrito" EntitySet="tbl_carrito" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_carri__carri__5DCAEF64" Association="Self.FK__tbl_carri__carri__5DCAEF64">
+      <End Role="tbl_producto" EntitySet="tbl_producto" />
+      <End Role="tbl_carrito" EntitySet="tbl_carrito" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_produ__pro_f__4222D4EF" Association="Self.FK__tbl_produ__pro_f__4222D4EF">
+      <End Role="tbl_categoria" EntitySet="tbl_categoria" />
+      <End Role="tbl_producto" EntitySet="tbl_producto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_produ__pro_f__412EB0B6" Association="Self.FK__tbl_produ__pro_f__412EB0B6">
+      <End Role="tbl_usuario" EntitySet="tbl_usuario" />
+      <End Role="tbl_producto" EntitySet="tbl_producto" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

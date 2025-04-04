@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@Page.Title</title>
+    @RenderSection("head", required: false)
+    @RenderSection("Scripts", required: false)
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/layoutstyle.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav navbar-left">
+                    <!-- Imagen del logo en lugar de la categoría -->
+                    <li>
+                        <div>
+                            <a href="@Url.Action("Index", "Usuario")">
+                                <img src="~/Content/images/Logo.png" alt="Logo" class="logo" />
+                            </a>
+
+                            @if (Session["u_id"] != null)
+                            {
+                                @Html.ActionLink("Crear Publicación", "CreatePublic", "Usuario", null, new { @class = "na" })
+                            }
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    @if (Session["u_id"] == null)
+                    {
+                        @Html.ActionLink("Iniciar Sesión", "Login", "Usuario", null, new { @class = "na" })
+                        @Html.ActionLink("Registrarse", "Registrar", "Usuario", null, new { @class = "na" })
+                    }
+                    else
+                    {
+                        <div>
+                            <!-- Reemplazamos "Carrito" por la imagen del carrito -->
+                            <a href="@Url.Action("VerCarrito", "Carrito")">
+                                <img src="~/Content/images/Carrito.png" alt="Carrito" class="carrito-icon" />
+                            </a>
+                            @Html.ActionLink("Mi Perfil", "MiPerfil", "Usuario", null, new { @class = "na" })
+                            @Html.ActionLink("Cerrar Sesión", "Salir", "Usuario", null, new { @class = "na" })
+                        </div>
+                    }
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    @RenderBody()
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+</body>
+</html>

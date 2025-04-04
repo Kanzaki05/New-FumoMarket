@@ -1,0 +1,160 @@
+/* Estilos generales */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+#main-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Caja del formulario */
+#box {
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Título del formulario */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #343a40;
+    text-align: center;
+}
+
+/* Grupo de formularios */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Entrada con icono */
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-group-addon {
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 5px 0 0 5px;
+    padding: 10px;
+    color: #6c757d;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 0 5px 5px 0;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+    /* Placeholder en los campos de texto */
+    .form-control::placeholder {
+        color: #adb5bd;
+    }
+
+/* Botón de enviar */
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-success:hover {
+        background-color: #218838;
+    }
+
+/* Mensajes de error */
+span[style="color:red"] {
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Mensaje de error general */
+p[style="color:red"] {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Estilos para el input de archivo */
+input[type="file"] {
+    padding: 5px;
+}
+
+/* Centrado del botón de registro */
+.form-group[style="text-align:center"] {
+    margin-top: 20px;
+}
+
+/* Estilo para la imagen de perfil */
+.profile-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centrado de la imagen */
+    align-items: center; /* Alineación vertical */
+    width: 100%; /* Asegura que ocupe todo el espacio disponible */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+/* Imagen de perfil */
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 20%;
+    object-fit: cover; /* Asegura que la imagen no se deforme */
+    display: block; /* Elimina el margen inferior innecesario de la imagen */
+}
+
+/* Estilo para la "X" de eliminar */
+.delete-image-btn {
+    position: absolute;
+    top: -100px; /* Ajusta la posición para asegurarte que esté en la esquina */
+    right: 35px; /* Ajusta la posición para asegurarte que esté en la esquina */
+    background-color: rgb(128, 128, 128, 0.1); /* Marrón tenue con opacidad baja */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Mostrar la "X" cuando el mouse está sobre la imagen */
+.profile-image-container:hover .delete-image-btn {
+    opacity: 1;
+}
+
+.delete-image-btn:hover {
+    background-color: rgba(128, 128, 128, 0.5); /* Gris oscuro solo al pasar el mouse sobre la "X" */
+}
+
+/* Estilos para el input de archivo */
+input[type="file"] {
+    padding: 5px;
+}
+
+/* Centrado del botón de registro */
+.form-group[style="text-align:center"] {
+    margin-top: 20px;
+}

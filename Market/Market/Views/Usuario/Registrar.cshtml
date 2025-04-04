@@ -1,0 +1,138 @@
+﻿@model Market.Models.tbl_usuario
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/registerstyle.css" rel="stylesheet" />
+    <link href="~/Content/footerstyle.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="main-div">
+        <div id="box" class="img-responsive">
+            @using (Html.BeginForm("Registrar",
+                            "Usuario",
+                            FormMethod.Post,
+                            new { enctype = "multipart/form-data" }))
+            {
+                <div class="container">
+                    <div class="form signin">
+                        <h1>Registrar Nuevo Usuario</h1>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                @Html.TextBoxFor(x => x.u_nombre, new { @class = "form-control", @placeholder = "Nombre" })
+                            </div>
+                            <span style="color:red">@Html.ValidationMessageFor(x => x.u_nombre)</span>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                @Html.TextBoxFor(x => x.u_email, new { @class = "form-control", @placeholder = "Email" })
+                            </div>
+                            <span style="color:red">@Html.ValidationMessageFor(x => x.u_email)</span>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                @Html.PasswordFor(x => x.u_clave, new { @class = "form-control", @placeholder = "Contraseña" })
+                            </div>
+                            <span style="color:red">@Html.ValidationMessageFor(x => x.u_clave)</span>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                @Html.TextBoxFor(x => x.u_contacto, new { @class = "form-control", @placeholder = "Teléfono" })
+                            </div>
+                            <span style="color:red">@Html.ValidationMessageFor(x => x.u_contacto)</span>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></div>
+                                @Html.TextAreaFor(x => x.u_descrip, new { @class = "form-control", @placeholder = "Descripción (Opcional)", rows = "3" })
+                            </div>
+                        </div>
+
+                        <!-- Imagen de perfil -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-picture"></span></div>
+                                <input type="file" name="imgfile" id="imgfile" class="form-control" onchange="previewImage(event)" />
+                            </div>
+                        </div>
+
+                        <!-- Imagen actual (si existe) -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                @if (Model != null && Model.u_imagen != null)
+                                {
+                                    <div class="profile-image-container">
+                                        <img id="current-image" src="@Url.Content(Model.u_imagen)" alt="Imagen de perfil" class="profile-image" />
+                                        <a href="@Url.Action("EliminarImagen", "Usuario", new { id = Model.u_id })" class="btn btn-danger delete-image-btn">x</a>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="profile-image-container">
+                                        <img id="current-image" src="@Url.Content("~/Content/Images/PerfilFoto.png")" alt="Imagen de perfil por defecto" class="profile-image" />
+                                    </div>
+                                }
+                            </div>
+                        </div>
+
+                        <!-- JavaScript para mostrar vista previa -->
+                        <script>
+                            function previewImage(event) {
+                                var file = event.target.files[0]; // Obtener el archivo seleccionado
+                                var reader = new FileReader();
+
+                                // Una vez que se carga la imagen
+                                reader.onload = function (e) {
+                                    var imagePreview = document.getElementById('current-image'); // Obtener la imagen de perfil actual
+                                    imagePreview.src = e.target.result; // Cambiar la fuente de la imagen a la seleccionada
+                                }
+
+                                // Leer el archivo seleccionado como URL de datos
+                                if (file) {
+                                    reader.readAsDataURL(file);
+                                }
+                            }
+                        </script>
+
+
+                        <div class="form-group" style="text-align:center">
+                            <input type="submit" value="Registrar Usuario" class="btn btn-success btn-block" />
+                        </div>
+
+                        <div class="form-group">
+                            <p style="color:red">@ViewBag.error</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery.validate-vsdoc.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+</body>
+</html>

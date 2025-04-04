@@ -1,0 +1,100 @@
+﻿/* Estilos generales para el cuerpo */
+body {
+    background-color: #343a40;
+    color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #212529;
+    border-bottom: 2px solid #495057;
+    padding: 10px;
+}
+
+/* Estilos para los elementos dentro de la barra de navegación */
+.navbar-inverse .navbar-nav > li > a {
+    color: #f8f9fa;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+    .navbar-inverse .navbar-nav > li > a:hover {
+        color: #17a2b8;
+        background-color: #495057;
+        border-radius: 5px;
+    }
+
+/* Estilo para los enlaces activos */
+.navbar-inverse .navbar-nav > .active > a {
+    color: #17a2b8;
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+/* Estilos para los botones en la barra de navegación */
+.na {
+    color: #f8f9fa;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    .na:hover {
+        color: #17a2b8;
+        background-color: #495057;
+        border-radius: 5px;
+    }
+
+/* Espaciado para los elementos de la barra de navegación */
+.navbar-nav {
+    margin-left: 10px;
+}
+
+/* Contenedor principal */
+.container-fluid {
+    padding: 0 20px;
+}
+
+/* Estilos para los enlaces en el cuerpo */
+a {
+    color: #17a2b8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+    a:hover {
+        color: #f8f9fa;
+        text-decoration: underline;
+    }
+
+/* Estilos para el logo en la barra de navegación */
+.logo {
+    width: 90px;
+    height: 90px;
+    transition: all 0.3s ease; /* Suaviza la transición */
+}
+
+    .logo:hover {
+        border: 3px solid #495057; /* Agrega un borde oscuro */
+        filter: brightness(0.7); /* Oscurece la imagen */
+    }
+
+/* Estilos para el carrito en la barra de navegación */
+.carrito-icon {
+    width: 70px; /* Ajusta el tamaño del icono del carrito */
+    height: 70px;
+    margin-right: 15px;
+    transition: all 0.3s ease; /* Suaviza la transición */
+}
+
+    .carrito-icon:hover {
+        border: 3px solid #495057; /* Agrega un borde oscuro */
+        filter: brightness(0.7); /* Oscurece la imagen */
+    }
+
+

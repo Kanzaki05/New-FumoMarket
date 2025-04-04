@@ -1,0 +1,58 @@
+﻿/* Estilos generales para el contenedor */
+.container {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado del formulario */
+h2 {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Secciones del formulario */
+h4 {
+    margin-top: 20px;
+    color: #343a40;
+    font-weight: bold;
+}
+
+/* Estilos para los campos de formulario */
+.form-group label {
+    font-weight: bold;
+    color: #495057;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+/* Botón de enviar */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+/* Espaciado entre campos */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Línea divisoria */
+hr {
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

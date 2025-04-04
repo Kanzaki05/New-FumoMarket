@@ -1,0 +1,97 @@
+﻿/* Contenedor general */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo para la tarjeta del usuario */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 15px auto;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.btn-block {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Tabla de publicaciones */
+.table {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .table th {
+        background-color: #343a40;
+        color: #fff;
+        text-align: center;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .table td {
+        text-align: center;
+        vertical-align: middle;
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+.img-thumbnail {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Botones de acción */
+.btn-warning {
+    color: #fff;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+/* Estilo para el encabezado de "Mis Publicaciones" */
+h3 {
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+/* Texto centrado para la tabla vacía */
+.text-center {
+    color: #6c757d;
+    font-size: 1rem;
+    font-style: italic;
+}

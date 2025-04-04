@@ -1,0 +1,122 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<Market.Models.tbl_producto>
+
+@{
+    ViewBag.Title = "Publicaciones";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<link href="~/Content/publicacionesstyle.css" rel="stylesheet" />
+<link href="~/Content/footerstyle.css" rel="stylesheet" />
+
+
+<div class="container">
+    <div id="main-div">
+        <div class="formulario-busqueda">
+            @using (@Html.BeginForm("Publicaciones", "Usuario"))
+            {
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Buscar" name="buscar" id="buscar">
+                    <button type="submit" class="btn btn-success">Buscar</button>
+                </div>
+            }
+        </div>
+
+        <div class="row-publicaciones">
+            @{ int x = 0; }
+            @if (Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    x++;
+                    <div class="col-lg-4 col-md-4 publicacion-item">
+                        <img class="cimg" src="@Url.Content(item.pro_imagen)" style="border-radius: 50px;" />
+                        <p style="color:Gray">Precio: S/. @item.pro_precio</p>
+                        <h4 style="color: #808080; font-family: 'Arial Rounded MT'; margin-top: 10px;">
+                            @Html.ActionLink(@item.pro_nombre, "VerPublicacion", new { id = @item.pro_id })
+                        </h4>
+
+                        @* Verifica si el usuario está logueado antes de mostrar el botón *@
+                        @if (Session["u_id"] != null)  // o usar User.Identity.IsAuthenticated si usas autenticación basada en cookies/tokens
+                        {
+                            <button class="btn btn-link agregar-carrito" style="color: #808080; font-family: 'Arial Rounded MT'; text-decoration: none; padding: 0; margin: 10px 0; border: none; background: none;" data-producto-id="@item.pro_id">
+                                Añadir al carrito
+                            </button>
+                        }
+                    </div>
+                }
+            }
+        </div>
+
+        <div class="pagination-container">
+            <div style="color:black" class="pagination">
+                @Html.PagedListPager(Model, page => Url.Action("Publicaciones", new { page }))
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+            $(document).ready(function () {
+                // Al hacer clic en el botón "Añadir al carrito"
+                $(".agregar-carrito").on("click", function () {
+                    var productoId = $(this).data("producto-id");
+
+                    // Mostrar alerta para confirmar la acción
+                    var confirmacion = confirm("¿Quieres añadir este producto al carrito?");
+                    if (confirmacion) {
+                        // Realizar la petición Ajax para agregar el producto al carrito
+                        $.ajax({
+                            url: '@Url.Action("AgregarAlCarrito", "Carrito")', // Cambia según tu acción
+                            type: 'POST',
+                            data: { productoId: productoId },
+                            success: function (response) {
+                                alert("Producto añadido al carrito.");
+                            },
+                            error: function () {
+                                alert("Error al añadir al carrito.");
+                            }
+                        });
+                    }
+                });
+            });
+    </script>
+
+
+
+
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "04078241-0748-45f1-8c77-9acf138f5e72", // The ID of this integration.
+            region: "au-syd", // The region your integration is hosted in.
+            serviceInstanceID: "72d29ea4-df35-41a2-827e-57d7f66a9aad", // The ID of your service instance.
+            onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        });
+    </script>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <ul class="social-links">
+                    <li><a href="#" target="_blank" class="social-link">Facebook</a></li>
+                    <li><a href="#" target="_blank" class="social-link">Twitter</a></li>
+                    <li><a href="#" target="_blank" class="social-link">Instagram</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contáctanos</h4>
+                <p class="contact-info">Número de ejemplo: +51 123 456 789</p>
+            </div>
+
+            <div class="footer-section">
+                <h4><a href="#" class="claims-link">Libro de Reclamaciones</a></h4>
+            </div>
+        </div>
+    </footer>
+</div>

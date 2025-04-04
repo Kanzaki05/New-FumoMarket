@@ -1,0 +1,74 @@
+/* Contenedor principal */
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* Sección de Información */
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: bold;
+}
+
+/* Sección de la Imagen */
+.imag {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+    .imag .imagen {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+/* Tabla de detalles */
+table {
+    width: 400px;
+    border-collapse: collapse;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    font-weight: normal;
+}
+
+td {
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+.navi {
+    font-weight: bold;
+}
+
+/* Botones */
+.buton {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+    .buton a {
+        padding: 10px 15px;
+        background-color: #17a2b8;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+        .buton a:hover {
+            background-color: #138496;
+        }

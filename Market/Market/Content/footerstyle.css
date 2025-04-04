@@ -1,0 +1,83 @@
+﻿/* Footer general */
+.site-footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Contenedor del footer */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Sección individual del footer */
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+    /* Títulos de cada sección */
+    .footer-section h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #ffc107;
+    }
+
+/* Enlaces de redes sociales */
+.social-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .social-links li {
+        margin-bottom: 8px;
+    }
+
+.social-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+    .social-link:hover {
+        color: #ffc107;
+    }
+
+/* Información de contacto */
+.contact-info {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Enlace del libro de reclamaciones */
+.claims-link {
+    color: #ffc107;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+    .claims-link:hover {
+        color: #e0a800;
+    }
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

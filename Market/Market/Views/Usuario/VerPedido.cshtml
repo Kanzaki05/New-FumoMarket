@@ -1,0 +1,80 @@
+﻿@model Market.Models.VerUsuarioConPedidos
+
+@{
+    ViewBag.Title = "Detalles del Pedido";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<link href="~/Content/carritostyle.css" rel="stylesheet" />
+<link href="~/Content/footerstyle.css" rel="stylesheet" />
+
+<br />
+
+<h2 style="color:white">Detalles del Pedido - Pedido #@Model.Pedidos.FirstOrDefault().NumeroPedido</h2>
+
+<!-- Tabla de detalles del pedido -->
+<h3>Detalles del Pedido</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Número de Pedido</th>
+            <th>Dirección</th>
+            <th>Fecha de Compra</th>
+            <th>Método de Pago</th>
+            <th>Precio Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pedido in Model.Pedidos)
+        {
+            <tr>
+                <td>@pedido.NumeroPedido</td>
+                <td>
+                    @pedido.Pais <br />
+                    @pedido.Provincia <br />
+                    @pedido.Distrito <br />
+                    @pedido.CodigoPostal <br />
+                    @pedido.Linea1 <br />
+                    @pedido.Linea2
+                </td>
+                <td>@Convert.ToDateTime(pedido.FechaCompra).ToString("dd/MM/yyyy")</td>
+                <td>@pedido.MetodoPago</td>
+                <td>S/. @pedido.PrecioTotal</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Tabla de productos del pedido -->
+<h3>Productos del Pedido</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Foto</th>
+            <th>Cantidad</th>
+            <th>Precio Unitario</th>
+            <th>Precio Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pedido in Model.Pedidos)
+        {
+            foreach (var producto in pedido.Productos)
+            {
+                <tr>
+                    <td>@producto.ProductoNombre</td>
+                    <td>
+                        <img src="@Url.Content(producto.Imagen)" alt="Imagen de @producto.ProductoNombre" class="img-thumbnail" width="100" />
+                    </td>
+                    <td>@producto.Cantidad</td>
+                    <td>S/. @producto.PrecioUnitario</td>
+                    <td>S/. @producto.PrecioTotal</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+<!-- Enlace para regresar a la vista anterior -->
+<a href="@Url.Action("MiPerfil", "Usuario")" class="btn btn-success">Regresar</a>

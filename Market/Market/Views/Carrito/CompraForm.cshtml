@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "Formulario de Compra";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/Content/comprastyle.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Formulario de Compra</h2>
+
+        <form action="@Url.Action("ProcesarCompra", "Carrito")" method="post" class="purchase-form">
+            <!-- Información de Pago -->
+            <h4>Información de Pago</h4>
+
+            <div class="form-row">
+                <!-- Tipo de Pago -->
+                <div class="form-group col-md-4">
+                    <label for="tipoPago">Tipo de Pago</label>
+                    <select id="tipoPago" name="tipoPago" class="form-control">
+                        <option selected>Seleccionar...</option>
+                        <option>Tarjeta de Crédito</option>
+                        <option>Tarjeta de Débito</option>
+                    </select>
+                </div>
+
+                <!-- Número de Tarjeta -->
+                <div class="form-group col-md-4">
+                    <label for="tarjeta">Número de Tarjeta</label>
+                    <input type="text" class="form-control" id="tarjeta" name="tarjeta" placeholder="1234 5678 9012 3456">
+                </div>
+
+                <!-- Fecha de Caducidad -->
+                <div class="form-group col-md-2">
+                    <label for="caducidad">Caducidad</label>
+                    <input type="text" class="form-control" id="caducidad" name="caducidad" placeholder="MM/YY">
+                </div>
+
+                <!-- CVV -->
+                <div class="form-group col-md-2">
+                    <label for="cvv">CVV</label>
+                    <input type="text" class="form-control" id="cvv" name="cvv" placeholder="123">
+                </div>
+            </div>
+
+            <hr />
+
+            <!-- Dirección de Envío -->
+            <h4>Dirección de Envío</h4>
+
+            <div class="form-row">
+                <!-- País -->
+                <div class="form-group col-md-4">
+                    <label for="pais">País</label>
+                    <input type="text" class="form-control" id="pais" name="pais" placeholder="País">
+                </div>
+
+                <!-- Provincia -->
+                <div class="form-group col-md-4">
+                    <label for="provincia">Provincia</label>
+                    <input type="text" class="form-control" id="provincia" name="provincia" placeholder="Provincia">
+                </div>
+
+                <!-- Ciudad -->
+                <div class="form-group col-md-4">
+                    <label for="ciudad">Ciudad</label>
+                    <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ciudad">
+                </div>
+            </div>
+
+            <!-- Dirección Línea 1 y 2 -->
+            <div class="form-group">
+                <label for="direccion1">Dirección Línea 1</label>
+                <input type="text" class="form-control" id="direccion1" name="direccion1" placeholder="Calle y número">
+            </div>
+
+            <div class="form-group">
+                <label for="direccion2">Dirección Línea 2</label>
+                <input type="text" class="form-control" id="direccion2" name="direccion2" placeholder="Apartamento, piso, etc. (opcional)">
+            </div>
+
+            <!-- Código Postal -->
+            <div class="form-group col-md-4">
+                <label for="codigoPostal">Código Postal</label>
+                <input type="text" class="form-control" id="codigoPostal" name="codigoPostal" placeholder="000000">
+            </div>
+
+            <!-- Botón de Enviar -->
+            <button type="submit" class="btn btn-primary btn-block mt-4">Realizar Compra</button>
+        </form>
+
+    </div>
+
+</body>
+</html>

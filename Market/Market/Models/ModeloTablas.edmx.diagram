@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d875eb371cba4084b4e7a992092a8fe6" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="dbMarketplaceModel.tbl_admin" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbMarketplaceModel.tbl_carrito" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbMarketplaceModel.tbl_categoria" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbMarketplaceModel.tbl_compra" Width="1.5" PointX="6" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbMarketplaceModel.tbl_detalle_compra" Width="1.5" PointX="8.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbMarketplaceModel.tbl_direccion" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbMarketplaceModel.tbl_pago" Width="1.5" PointX="8.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbMarketplaceModel.tbl_producto" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbMarketplaceModel.tbl_usuario" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbMarketplaceModel.tbl_usuario_direccion" Width="1.5" PointX="3" PointY="12.5" IsExpanded="true" />
+        <AssociationConnector Association="dbMarketplaceModel.FK__tbl_categ__cat_f__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="dbMarketplaceModel.FK__tbl_carri__carri__4A8310C6" ManuallyRouted="false" />
+        <AssociationConnector Association="dbMarketplaceModel.FK__tbl_carri__carri__4B7734FF" ManuallyRouted="false" />
+        <AssociationConnector Association="dbMarketplaceModel.FK__tbl_produ__pro_f__47A6A41B" ManuallyRouted="false" />
+        <AssociationConnector Association="dbMarketplaceModel.FK__tbl_compr__compr__503BEA1C" ManuallyRouted="false" />
+        <AssociationConnector Association="dbMarketplaceModel.FK__tbl_compr__compr__51300E55" ManuallyRouted="false" />
+        <AssociationConnector Association="dbMarketplaceModel.FK__tbl_pago__pago_f__55009F39" ManuallyRouted="false" />
+        <AssociationConnector Association="dbMarketplaceModel.fk_detalle_compra" ManuallyRouted="false" />
+        <AssociationConnector Association="dbMarketplaceModel.fk_detalle_producto" ManuallyRouted="false" />
+        <AssociationConnector Association="dbMarketplaceModel.FK__tbl_usuar__ud_di__42E1EEFE" ManuallyRouted="false" />
+        <AssociationConnector Association="dbMarketplaceModel.FK__tbl_produ__pro_f__46B27FE2" ManuallyRouted="false" />
+        <AssociationConnector Association="dbMarketplaceModel.FK__tbl_usuar__ud_u___41EDCAC5" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

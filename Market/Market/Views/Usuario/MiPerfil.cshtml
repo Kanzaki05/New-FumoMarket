@@ -1,0 +1,73 @@
+﻿@using PagedList.Mvc
+@model Market.Models.VerUsuario
+@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<link href="~/Content/perfilstyle.css" rel="stylesheet" />
+<link href="~/Content/footerstyle.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Información del Usuario -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="@Url.Content(Model.u_imagen)" class="card-img-top img-thumbnail" alt="Imagen de usuario">
+                <div class="card-body text-center">
+                    <h5 class="card-title">@Model.u_nombre</h5>
+                    <p class="card-text">@Model.u_email</p>
+                    <p class="card-text">@Model.u_contacto</p>
+                    <p class="card-text">@Model.u_descrip</p>
+                    <a href="@Url.Action("EditarPerfil", "Usuario", new { id = Model.u_id })" class="btn btn-primary btn-block">Editar Perfil</a>
+                    <a href="@Url.Action("MisPedidos", "Usuario", new { id = Model.u_id })" class="btn btn-primary btn-block">Mis Pedidos</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publicaciones del Usuario -->
+        <div class="col-md-8">
+            <h3>Mis Publicaciones</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @if (Model.Productos != null && Model.Productos.Any())
+                    {
+                        foreach (var prod in Model.Productos)
+                        {
+                            <tr>
+                                <td>
+                                    <img src="@Url.Content(prod.pro_imagen)" class="img img-responsive" style="width: 100px; height: 100px;" />
+                                </td>
+                                <td>@prod.pro_nombre</td>
+                                <td>@prod.pro_descrip</td>
+                                <td>S/. @prod.pro_precio</td>
+                                <td>
+                                    <a href="@Url.Action("ModificarPublicacion", "Usuario", new { id = prod.pro_id })" class="btn btn-warning btn-sm">Editar</a>
+                                    <a href="@Url.Action("DeletePublic", "Usuario", new { id = prod.pro_id })" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de eliminar este producto?');">Eliminar</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center">No tienes publicaciones aún.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <a href="@Url.Action("CreatePublic", "Usuario")" class="btn btn-success btn-block">Crear Nueva Publicación</a>
+        </div>
+    </div>
+</div>
+
+
